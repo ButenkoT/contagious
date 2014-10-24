@@ -1,11 +1,7 @@
-<% if @errors %>
-    <p class="error"><%= @errors %></p>
-<% end %>
 
-
-<%= form_for '/login', :remote => true do |f| %>
+<%= form_for '/login' do |f| %>
   
-  <%= f.text_field :email, :autofocus => true, :placeholder => 'email' %>
+  <%= f.email_field :email, :autofocus => true, :placeholder => 'email' %>
   
   <%= f.password_field :password, :placeholder => 'password' %>
   <%= f.submit 'Login' %>

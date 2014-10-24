@@ -8,5 +8,6 @@ class ApplicationController < ActionController::Base
   private
   def authenticate
     @current_player = Player.find_by(:id => session[:player_id])
-    end
+    session[:player_id] = nil unless @current_player.present?
+  end
 end
