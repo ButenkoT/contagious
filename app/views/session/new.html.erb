@@ -8,5 +8,25 @@
   <%= f.text_field :email, :autofocus => true, :placeholder => 'email' %>
   
   <%= f.password_field :password, :placeholder => 'password' %>
-  <%= f.submit 'Login' %>
+  <%= f.submit 'login' %>
 <% end %>
+
+
+<h2>Please sign in</h2>
+
+<div class='login_block'>
+	<%= form_tag '/login' , :class => 'form-inline' do %>
+		<div class="form-group">
+			<%= label_tag :email %>
+			<%= text_field_tag :email, nil, :autofocus => true, :class => 'form-control' %>
+		</div>
+
+		<div class="form-group">
+			<%= label_tag :password %>
+			<%= password_field_tag :password, nil, :class => 'form-control' %>
+		</div>
+
+		<button class='btn btn-primary'>Sign in</button>
+	<% end %>
+
+</div>
