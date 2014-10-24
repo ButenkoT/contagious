@@ -5,7 +5,7 @@ class SessionController < ApplicationController
 
   #where the login form POSTs data
   def create
-    player = Player.where(:nickname => params[:username]).first
+    player = Player.where(:email => params[:email]).first
     if player.present? && player.authenticate(params[:password])
       session[:player_id] = player.id
       redirect_to root_path
