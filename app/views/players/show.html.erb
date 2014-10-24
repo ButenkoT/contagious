@@ -1,0 +1,10 @@
+<h2><%= @player.nickname %></h2>
+<p>User since: <%= @player.created_at.strftime '%B %m %Y' %></p>
+<p>Score: <%= @player.score %></p>
+<p>Health: <%= @player.healthbar %></p>
+
+<% if @current_player && (@current_player.id == @player.id) %>
+
+  <a href="/players/<%= @current_player.id %>/update">Edit profile </a>
+ 
+<% end %>

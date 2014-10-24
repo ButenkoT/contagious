@@ -1,0 +1,22 @@
+
+<%= form_for @player do |f| %>
+
+  <p>
+    <%= f.text_field :nickname, :placeholder => "Nickname" %>
+  </p>
+
+  <p> 
+    <%= f.email_field :email, :placeholder => "Email" %>
+  </p>
+
+  <p>
+    <%= f.password_field :password, :placeholder => "Password" %>
+  </p>
+
+  <p>   
+    <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %>
+  </p>
+ 
+  <%= f.submit %>
+
+<% end %>

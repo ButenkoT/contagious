@@ -6,10 +6,10 @@ class PlayersController < ApplicationController
   def create
     @player = Player.new player_params
     if @player.save
-      redirect_to root_path #here user is valid
+      session[:player_id] = @player.id
+      redirect_to root_path
     else
-      #here the user is invalid
-      render :new 
+      render :new
     end
   end
 

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :players, :except => [:edit]
 
-  get '/game' => 'game#index'
+  get '/game_boards' => 'game_boards#index'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

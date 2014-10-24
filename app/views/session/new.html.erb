@@ -1,11 +1,14 @@
+<% if @errors %>
+    <p class="error"><%= @errors %></p>
+<% end %>
 
 
 <%= form_for Player.new, :remote => true do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit %>
+  
+  <%= f.text_field :email, :autofocus => true, :placeholder => 'email' %>
+  
+  <%= f.password_field :password, :placeholder => 'password' %>
+  <%= f.submit 'Login' %>
 <% end %>
+
+
