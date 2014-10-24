@@ -8,10 +8,18 @@
 </head>
 <body>
 
-<%= yield %>
+<nav>
+    <div class='container'>
+      <ul>
+        <li><%= link_to('Home', root_path) %></li>
+        <%== intellinav %>
+      </ul>
+    </div>
+  </nav>
 
-<div class="div"></div>
-
+  <div class='container'>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
