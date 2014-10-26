@@ -1,6 +1,11 @@
 $(document).ready(function () {
 	console.log('I am here');
 
+	$('.test-popup-link').magnificPopup({ 
+		  type: 'image'
+			// other options
+		});
+
 // on click of the level button the currentLevel variable needs to be set and the launch level lightbox shall appear. How to write this in an efficient way to pass on the right level depending on which button the user clicked?
 	$(".level_link #level_link_01").on('click', function(event) {
 		event.preventDefault();
@@ -21,9 +26,6 @@ var launchLevelLightbox = function () {
 		// decrease opacity of elements outside the modal window
 		// add button tag "X" on top right of modal window which reverts the above
 
-		$('.test-popup-link').magnificPopup({ 
-		  type: 'image'
-			// other options
-		});
+		
 
 		};
