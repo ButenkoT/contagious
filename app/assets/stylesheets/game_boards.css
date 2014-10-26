@@ -2,8 +2,8 @@
   width: 520px;
   min-height: 520px;
   border: 1px dotted red;
+  margin-left:100px;
 }
-
 
 .board-cell{
   border: 1px solid green;
@@ -13,6 +13,32 @@
   float:left;
 }
 
-.check{
+[data-type]{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+[data-type="1"]{ 
+  background-color:yellow;
+}
+
+[data-type="2"]{
+  background-color: blue;
+}
+
+[data-type="3"]{
+  background-color: red;
+}
+
+[data-type="4"]{
   background-color: green;
+}
+
+[data-type="5"]{
+  background-color: orange;
+}
+
+.clicked{
+  background-color: grey;
 }
