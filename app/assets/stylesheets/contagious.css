@@ -1,7 +1,31 @@
-.background_image {
-	background: url(contagious_background.jpg) no-repeat center center fixed; 
+body {
+	background: url(contagious_background.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+nav {      
+	list-style-type: none;
+	right: 0; 
+	width: 100px;
+	height: 800px; 
+	display:inline-block;
+	position:absolute;
+	font-family: Helvetica;
+	font-size: 9px;
+	text-align: center;
+	background-color: #dbdbdb;
+	box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+	max-height: 630px;
+	color: white;
+	width: 70px;
+} 
+
+li {
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	text-align: center;
 }
