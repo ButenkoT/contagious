@@ -1,0 +1,18 @@
+.game-board{
+  width: 520px;
+  min-height: 520px;
+  border: 1px dotted red;
+}
+
+
+.board-cell{
+  border: 1px solid green;
+  width:50px;
+  min-height: 50px;
+  display:inline-block;
+  float:left;
+}
+
+.check{
+  background-color: green;
+}
