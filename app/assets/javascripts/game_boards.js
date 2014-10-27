@@ -43,7 +43,9 @@ $(document).ready(function(){
 
 
   //should be not more then 2 clicked cells at a time
-  function(
+  function amountOfClickedCells(){
+    
+  };
 
   //check if 2nd clicked cell is in a range of 1st clicked cell via coordinates
     //swap clicked board-cell with 2nd clicked cell
