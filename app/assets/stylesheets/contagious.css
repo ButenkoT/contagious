@@ -22,10 +22,3 @@ nav {
 	color: white;
 	width: 70px;
 } 
-
-li {
-	list-style: none;
-	display: inline-block;
-	position: relative;
-	text-align: center;
-}
