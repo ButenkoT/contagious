@@ -3,6 +3,19 @@ var types = [1, 2, 3, 4, 5];
 
 
 function generate() {
+  $('.about_popup_launch').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });
+
+  // on click of the level button the currentLevel variable needs to be set and the launch level lightbox shall appear. How to write this in an efficient way to pass on the right level depending on which button the user clicked?
+	$(".level_welcome").on('click', function(event) {
+		event.preventDefault();
+		currentLevel = 1;
+		launchLevelLightbox();
+	});
+
+  var type = [1, 2, 3, 4, 5];
 
   //give us 100 values step by step randomisizng our type array values
   return _.range(0, 100, 1).map(function(){
