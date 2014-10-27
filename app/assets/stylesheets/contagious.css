@@ -1,3 +1,6 @@
+* {
+	color: rgb(10,250,10); /*Fabian: need to find a prettier colour. just to make it readable on red background for now*/
+}
 
 body {
 	background: url(contagious_background.png) no-repeat center center fixed; 
