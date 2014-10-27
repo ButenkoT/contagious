@@ -83,8 +83,7 @@ button.launch_level_popup:hover {
 
 }
 
-.window_column_left,
-.window_column_right {
+.window_column_left {
 	width: 49%;
 }
 
@@ -97,6 +96,7 @@ button.launch_level_popup:hover {
 	display: inline-block;
 	position: relative;
 	min-height: 100vh;
+  width: 45%;
 }
 
 .profile_box_grey {
@@ -117,7 +117,7 @@ button.launch_level_popup:hover {
 	display:inline-block;
 	position:relative;
 	font-family: Helvetica;
-	font-size: 12px;
+	font-size: 13px;
 	text-align: left;
 	margin: 20px;
 	background-color: white;
