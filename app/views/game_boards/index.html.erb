@@ -2,38 +2,40 @@
 
 <!--LEVEL SELECTION PAGE - needs to be hidden if currentLevel != nil -->
 
-<!-- Person image -->
 
-<img src="/assets/images/person.svg" id="person_image" alt="Person-Image">
 
-<!-- Person health bar -->
-<div id="person_health_score">
-	person health bar
+<div class="level_selection_container">
+
+	<!-- Person image -->
+	<img src="/assets/contagious_man_silhouette_thumb.png" id="person_image" alt="Person-Image">
+
+	<!-- Person health bar -->
+	<img src="/assets/health_bar_person.jpg" id="health_bar_person" class="health_bar">
+	</img>
+
+	<!-- Virus icon -->
+	<img src="/assets/green_germ_profile_image.png" id="virus_image" alt="Virus-Image">
+
+	<!-- Arrow icon -->
+	<div src="/assets/images/arrow-image.svg" id="click_me_arrow">
+	  image-arrow
+	</div>
+
+	<!-- 10 level links -->
+	<div class="level_link">
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_welcome" id="level_link_01">level 1</input>
+	</div>
+	<div class="level_link" id="level_link_02">level 2</div>
+	<div class="level_link" id="level_link_03">level 3</div>
+	<div class="level_link" id="level_link_04">level 4</div>
+	<div class="level_link" id="level_link_05">level 5</div>
+	<div class="level_link" id="level_link_06">level 6</div>
+	<div class="level_link" id="level_link_07">level 7</div>
+	<div class="level_link" id="level_link_08">level 8</div>
+	<div class="level_link" id="level_link_09">level 9</div>
+	<div class="level_link" id="level_link_10">level 10</div>
+
 </div>
-
-<!-- Virus icon -->
-<div src="/assets/images/virus_icon.svg" id="virus_image" alt="Virus-Image">
-	virus icon
-</div>
-
-<!-- Arrow icon -->
-<div src="/assets/images/arrow-image.svg" id="click_me_arrow">
-  image-arrow<!-- click me arrow, indicating what level button to press -->
-</div>
-
-<!-- 10 level links -->
-<div class="level_link">
-	<button href="#launch_level" class="level_welcome" id="level_link_01">level 1</button>
-</div>
-<div class="level_link" id="level_link_02">level 2</div>
-<div class="level_link" id="level_link_03">level 3</div>
-<div class="level_link" id="level_link_04">level 4</div>
-<div class="level_link" id="level_link_05">level 5</div>
-<div class="level_link" id="level_link_06">level 6</div>
-<div class="level_link" id="level_link_07">level 7</div>
-<div class="level_link" id="level_link_08">level 8</div>
-<div class="level_link" id="level_link_09">level 9</div>
-<div class="level_link" id="level_link_10">level 10</div>
 
 <!-- LEVEL WELCOME LIGHT BOX - needs to be called on click on level button -->
 

@@ -62,7 +62,7 @@ button.launch_level_popup {
 	display: block;
 	margin: auto;
 	box-shadow: 0px 10px 14px -7px #3e7327;
-	background-color:#77b55a;
+	background-color:#77b55a; 
 	border-radius:4px;
 	border:1px solid #4b8f29;
 	cursor:pointer;
@@ -77,6 +77,41 @@ button.launch_level_popup {
 
 button.launch_level_popup:hover {
 	background-color: rgb(150,10,150);
+}
+
+button.level_welcome {
+	background: url(contagious_red_crosshairs.svg) no-repeat center center fixed; 
+}
+
+.level_selection_container {
+	position: relative;
+}
+
+#person_image {
+	position: center;
+	display: block;
+	margin: auto;
+	height: 50%;
+	width: 50%;
+}
+
+#health_bar_person {
+	position: absolute;
+	top: 2em;
+	left: 2em;
+	width: 10%;
+	height: 10%;
+	min-width: 250px;
+	min-height: 250px;
+	margin: auto;
+	text-align: left;
+}
+
+#virus_image {
+	position: absolute;
+	top: 0;
+	right: 100px;
+	margin: auto;
 }
 
 .window {
