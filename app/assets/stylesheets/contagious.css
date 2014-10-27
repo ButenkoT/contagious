@@ -6,3 +6,33 @@
   max-width: 500px;
   margin: 20px auto;
 }
+
+h2.launch_level_popup {
+	text-align: center;
+}
+
+p.launch_level_popup {
+	margin-bottom: 2em;
+}
+
+button.launch_level_popup {
+	display: block;
+	margin: auto;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+
+button.launch_level_popup:hover {
+	background-color: rgb(150,10,150);
+}
+
