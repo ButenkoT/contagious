@@ -50,11 +50,11 @@ nav li:hover{
   margin: 20px auto;
 }
 
-h2.launch_level_popup {
+h2.popup {
 	text-align: center;
 }
 
-p.launch_level_popup {
+p.popup {
 	margin-bottom: 2em;
 }
 
