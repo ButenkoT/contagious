@@ -35,17 +35,21 @@ $(document).ready(function(){
 
     .on('click', '.board-cell:not(.clicked)',function () {
       $(this).addClass('clicked');
+      amountOfCheckedCells()
       getCoordinate($(this));
     });
-
 
   //check on the board if any 3 or more inline vertical or horizontal (match_3)
 
 
-  //should be not more then 2 clicked cells at a time
-  function amountOfClickedCells(){
-    
+  //makes a check on how many cells are clicked. should be not more then 2 clicked cells at a time 
+  function amountOfCheckedCells(){
+
+    if ($('.clicked').length > 2){
+      $('.board-cell').removeClass('clicked');
+    };
   };
+  
 
   //check if 2nd clicked cell is in a range of 1st clicked cell via coordinates
     //swap clicked board-cell with 2nd clicked cell
