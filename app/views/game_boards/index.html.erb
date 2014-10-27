@@ -18,14 +18,17 @@
 
 <!-- GAME BOARD - needs to be called on click of "start level" button in level launch light box -->
 
-<div class='game-board'>
+<div class='game-board'></div>
 
-  <script type='template/handlebars' id='gameTemplate' >
+<script type='template/handlebars' id='gameTemplate' >
 
-    <div class='board-cell' data-type="{{type}}">
-       {{type}}
-    </div>
+  <div class='board-cell' data-type="{{type}}">
+     {{type}}
 
-  </script>
+      <span class="coord"><i class="cell-x">0</i>, <i class="cell-y">0</i></span>
+     
+  </div>
 
-</div>
+</script>
+
+
