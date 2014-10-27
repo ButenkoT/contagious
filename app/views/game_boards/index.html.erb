@@ -1,34 +1,61 @@
-<h1>Here is our game</h1>
-
 
 
 <!--LEVEL SELECTION PAGE - needs to be hidden if currentLevel != nil -->
 
-<!-- Person image -->
-<!-- <img src="/assets/images/person.jpg" id="person-image" alt="Person-Image">
- -->
-<!-- Person health bar -->
-<!-- <div id="person-health-score">
-	
-</div> -->
 
-<!-- LEVEL LAUNCH LIGHT BOX - needs to be called on click on level button -->
 
+<div class="level_selection_container">
+
+	<!-- Person image -->
+	<img src="/assets/contagious_man_silhouette_thumb.png" id="person_image" alt="Person-Image">
+
+	<!-- Person health bar -->
+	<img src="/assets/health_bar_person.jpg" id="health_bar_person" class="health_bar">
+	</img>
+
+	<!-- Virus icon -->
+	<img src="/assets/green_germ_profile_image.png" id="virus_image" alt="Virus-Image">
+
+	<!-- Arrow icon -->
+	<div src="/assets/images/arrow-image.svg" id="click_me_arrow">
+	  image-arrow
+	</div>
+
+	<!-- 10 level links -->
+	<div class="level_link">
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_welcome" id="level_link_01">level 1</input>
+	</div>
+	<div class="level_link" id="level_link_02">level 2</div>
+	<div class="level_link" id="level_link_03">level 3</div>
+	<div class="level_link" id="level_link_04">level 4</div>
+	<div class="level_link" id="level_link_05">level 5</div>
+	<div class="level_link" id="level_link_06">level 6</div>
+	<div class="level_link" id="level_link_07">level 7</div>
+	<div class="level_link" id="level_link_08">level 8</div>
+	<div class="level_link" id="level_link_09">level 9</div>
+	<div class="level_link" id="level_link_10">level 10</div>
+
+</div>
+
+<!-- LEVEL WELCOME LIGHT BOX - needs to be called on click on level button -->
+
+<div id="launch_level" class="white-popup mfp-hide">
+  <h2 class="launch_level_popup">Welcome to level 1</h2>
+  <h3 class="launch_level_popup">Instructions: </h3>
+  <p class="launch_level_popup">There are no specific instructions for the first level</p>
+  <button class="launch_level_popup">Start level</button>
+</div>
 
 
 <!-- GAME BOARD - needs to be called on click of "start level" button in level launch light box -->
 
-<div class='game-board'></div>
+<div class="game-board"></div>
 
-<script type='template/handlebars' id='gameTemplate' >
+<script type="template/handlebars" id="gameTemplate" >
 
-  <div class='board-cell' data-type="{{type}}">
-     {{type}}
-
-      <span class="coord"><i class="cell-x">0</i>, <i class="cell-y">0</i></span>
-     
+  <div class="board-cell" data-type="{{type}}">
+    {{type}}
+    <span class="coord"><i class="cell-x">0</i>, <i class="cell-y">0</i></span>
   </div>
 
 </script>
-
-

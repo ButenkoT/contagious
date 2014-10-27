@@ -25,7 +25,11 @@ development:
   <<: *default
   database: contagious_development
   host: localhost
+<<<<<<< HEAD
+  username: AndrewThompson
+=======
   username: tetianabutenko
+>>>>>>> fdf693bf7676c7faf4dbc711e0375cb87b02781a
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

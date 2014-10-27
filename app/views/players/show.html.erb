@@ -1,10 +1,24 @@
-<h2><%= @player.nickname %></h2>
-<p>User since: <%= @player.created_at.strftime '%B %m %Y' %></p>
-<p>Score: <%= @player.score %></p>
-<p>Health: <%= @player.healthbar %></p>
+<div class="window">
+	<div>
+		<%= image_tag('contagious_logo.svg', :id => 'logo') %>
+	</div>
+	<div class="window_column_left"></div>
+	<div class="window_column_right">
+		<div class="profile_box_grey">
+			<div class="profile_box_white">
+				<%= image_tag('green_germ_profile_image.png', :id => 'germ') %>
+					<h2>Player Profile</h2>
+					<p>Nickname: <%= @player.nickname %></p>
+					<p>User since: <%= @player.created_at.strftime '%B %m %Y' %></p>
+					<p>Score: <%= @player.score %></p>
+					<p>Health: <%= @player.healthbar %></p>
 
-<% if @current_player && (@current_player.id == @player.id) %>
+					<% if @current_player && (@current_player.id == @player.id) %>
 
-  <a href='/players/edit'>Edit profile </a>
- 
-<% end %>
+					  <a href='/players/edit'>Edit profile </a>
+					 
+					<% end %>
+			</div>
+		</div>
+	</div>
+</div>

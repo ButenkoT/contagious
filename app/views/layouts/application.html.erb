@@ -2,24 +2,28 @@
 <html>
 <head>
   <title>Contagious</title>
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!-- Magnific Popup core CSS file -->
+  <link rel="stylesheet" href="magnific-popup/magnific-popup.css"> 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Magnific Popup core JS file -->
+  <script src="magnific-popup/jquery.magnific-popup.js"></script> 
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-
-<nav>
-    <div class='container'>
+  <nav>
       <ul>
-        <li><%= link_to('Home', root_path) %></li>
-        <%== intellinav %>
+          <li><%= link_to('Home', root_path) %></li>
+          <%== intellinav %>
       </ul>
-    </div>
+   
   </nav>
 
   <div class='container'>
     <%= yield %>
   </div>
+  
 </body>
 </html>

@@ -1,0 +1,212 @@
+* {
+	color: rgb(10,250,10); /*Fabian: need to find a prettier colour. just to make it readable on red background for now*/
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+	background: url(contagious_background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+nav {     
+	right: 0; 
+	width: 70px;
+	min-height: 900px; 
+	display:inline-block;
+	position:absolute;
+	font-family: Helvetica;
+	font-size: 13px;
+	background-color: #dbdbdb;
+ 	box-shadow: -10px 0px 10px 1px rgba(0,0,0,0.3);
+	color: rgba(255,255,255,1);
+} 
+
+nav ul{
+  margin-top: 30px;
+  padding:0px;
+}
+
+nav li{
+  padding-left: 18px;
+  padding-top: 10px;
+  list-style-type: none;
+}
+
+nav li:hover{
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+h2.launch_level_popup {
+	text-align: center;
+}
+
+p.launch_level_popup {
+	margin-bottom: 2em;
+}
+
+button.launch_level_popup {
+	display: block;
+	margin: auto;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background-color:#77b55a; 
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+
+button.launch_level_popup:hover {
+	background-color: rgb(150,10,150);
+}
+
+button.level_welcome {
+	background: url(contagious_red_crosshairs.svg) no-repeat center center fixed; 
+}
+
+.level_selection_container {
+	position: relative;
+}
+
+#person_image {
+	position: center;
+	display: block;
+	margin: auto;
+	height: 50%;
+	width: 50%;
+}
+
+#health_bar_person {
+	position: absolute;
+	top: 2em;
+	left: 2em;
+	width: 10%;
+	height: 10%;
+	min-width: 250px;
+	min-height: 250px;
+	margin: auto;
+	text-align: left;
+}
+
+#virus_image {
+	position: absolute;
+	top: 0;
+	right: 100px;
+	margin: auto;
+}
+
+.window {
+
+}
+
+.window_column_left {
+	width: 49%;
+}
+
+.window_column_left {
+	display: inline-block;
+	position: relative;
+}
+
+.window_column_right {
+	display: inline-block;
+	position: relative;
+	min-height: 100vh;
+  width: 45%;
+}
+
+.profile_box_grey {
+	width: 378px;
+	height: 315px; 
+	display:inline-block;
+	position:absolute;
+	background-color: #dbdbdb;
+	padding-top: 60px;
+	bottom: 2em;
+	right: 4em;
+	-webkit-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+}
+
+.profile_box_white {
+	width: 308px;
+	height: 200px; 
+	display:inline-block;
+	position:relative;
+	font-family: Helvetica;
+	font-size: 13px;
+	text-align: left;
+	margin: 20px;
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	color: black;
+	padding-left: 25px;
+	padding-top: 28px;
+}
+
+#germ {
+	position: absolute;
+	left: 25%;
+	top: -46%;
+}
+
+#logo {
+	position: absolute;
+	left: 2em;
+	top: 2em;
+	width: 60%;
+}
+
+.registration_box_grey {
+	width: 378px;
+	height: 315px; 
+	display:inline-block;
+	position:absolute;
+	background-color: #dbdbdb;
+	padding-top: 10px;
+	bottom: 2em;
+	right: 4em;
+	-webkit-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+}
+
+.registration_box_white {
+	width: 308px;
+	height: 241px; 
+	display:inline-block;
+	position:relative;
+	font-family: Helvetica;
+	font-size: 12px;
+	text-align: left;
+	margin: 20px;
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	color: black;
+	padding-left: 25px;
+	padding-top: 28px;
+}
