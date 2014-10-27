@@ -12,7 +12,7 @@ module ApplicationHelper
       nav += "<li><a href='" + player_path(@current_player) + "'><i class='fa fa-user fa-3x'></i></a></li> "
 
       # Logout Button
-      nav += "<li><a href='" + login_path + "' data-method='delete' data-confirm='Are you sure?'><i class='fa fa-sign-out fa-3x'></i></a></li> "
+      nav += "<li><a href='" + login_path + "' data-method='delete' data-confirm='Are you sure you want to leave the game?'><i class='fa fa-sign-out fa-3x'></i></a></li> "
       
       # Leaderboard Button
       nav += "<li><a href='" + players_path + "'><i class='fa fa-trophy fa-3x'></i></a></li> "

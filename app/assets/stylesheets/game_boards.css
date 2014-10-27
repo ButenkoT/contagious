@@ -20,15 +20,15 @@
 }
 
 [data-type="1"]{ 
-  background-color:yellow;
+  content: url(Pill.svg);
 }
 
 [data-type="2"]{
-  background-color: blue;
+  content: url(BlueGerm.svg);
 }
 
 [data-type="3"]{
-  background-color: red;
+  background-color: purple;
 }
 
 [data-type="4"]{
