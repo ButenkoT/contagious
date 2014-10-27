@@ -18,3 +18,4 @@
 # Ignose database yml file.
 /config/database.yml
 
+.idea
