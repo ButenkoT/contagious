@@ -1,5 +1,7 @@
 
 body {
+  margin: 0px;
+  padding: 0px;
 	background: url(contagious_background.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -7,22 +9,30 @@ body {
   background-size: cover;
 }
 
-nav {      
-	list-style-type: none;
+nav {     
 	right: 0; 
-	width: 100px;
-	height: 800px; 
+	width: 70px;
+	min-height: 900px; 
 	display:inline-block;
 	position:absolute;
 	font-family: Helvetica;
-	font-size: 9px;
-	text-align: center;
+	font-size: 13px;
 	background-color: #dbdbdb;
 	box-shadow:5px 5px 5px rgba(0,0,0,0.3);
-	max-height: 630px;
-	color: white;
-	width: 70px;
+	color: rgba(255,255,255,1);
 } 
+
+ul{
+  margin-top: 30px;
+  padding:0px;
+}
+
+li{
+  padding-left: 15px;
+  padding-top: 10px;
+  list-style-type: none;
+}
+
 
 .white-popup {
   position: relative;
