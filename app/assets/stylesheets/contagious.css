@@ -79,3 +79,56 @@ button.launch_level_popup:hover {
 	background-color: rgb(150,10,150);
 }
 
+.window {
+
+}
+
+.window_column_left,
+.window_column_right {
+	width: 49%;
+}
+
+.window_column_left {
+	display: inline-block;
+	position: relative;
+}
+
+.window_column_right {
+	display: inline-block;
+	position: relative;
+	min-height: 100vh;
+}
+
+.profile_box_grey {
+	width: 378px;
+	height: 315px; 
+	display:inline-block;
+	position:absolute;
+	background-color: #dbdbdb;
+	box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+	padding-top: 60px;
+	bottom: 2em;
+	right: 4em;
+}
+
+.profile_box_white {
+	width: 308px;
+	height: 200px; 
+	display:inline-block;
+	position:relative;
+	font-family: Helvetica;
+	font-size: 12px;
+	text-align: left;
+	margin: 20px;
+	background-color: white;
+	box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+	color: black;
+	padding-left: 25px;
+	padding-top: 28px;
+}
+
+#germ {
+	position: absolute;
+	left: 25%;
+	top: -46%;
+}
