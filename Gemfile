@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 
+gem 'handlebars_assets'
+gem 'underscore-rails', '~> 1.7.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'bcrypt'

@@ -3,6 +3,7 @@
 <!--LEVEL SELECTION PAGE - needs to be hidden if currentLevel != nil -->
 
 <!-- Person image -->
+
 <img src="/assets/images/person.svg" id="person_image" alt="Person-Image">
 
 <!-- Person health bar -->
@@ -46,3 +47,14 @@
 
 <!-- GAME BOARD - needs to be called on click of "start level" button in level launch light box -->
 
+<div class="game-board">
+
+  <script type="template/handlebars" id="gameTemplate" >
+
+    <div class="board-cell" data-type="{{type}}">
+       {{type}}
+    </div>
+
+  </script>
+
+</div>
