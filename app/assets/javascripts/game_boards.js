@@ -52,9 +52,9 @@ function getCoordinates(number) {
 
 
 function swap($new, $old) {
-  var _type = $new.data('type');
-  $new.data('type', $old.data('type'));
-  $old.data('type', _type);
+  var _type = $new.attr('data-type');
+  $new.attr('data-type', $old.attr('data-type'));
+  $old.attr('data-type', _type);
 }
 
 
@@ -75,14 +75,22 @@ x -- possible $old
 
 */
 function isNear($new, $old) {
-  // TODO: fill me
-  return false;
-}
+  var newcoord = getCoordinates(getNumber($new));
+  var oldcoord = getCoordinates(getNumber($old));
+  if ((Math.abs(newcoord[0] - oldcoord[0]) === 1 
+      && (newcoord[1] === oldcoord[1])) 
+    || (Math.abs(newcoord[1] - oldcoord[1]) === 1 
+      && (newcoord[0] === oldcoord[0]))){
+    return true;
+  } else {
+    return false;
+  };
+};
 
 function destroyMatches($board) {
 //check on the board if any 3 or more inline vertical or horizontal (match_3)
   // TODO: fill me
-  return false;
+  return true;
 }
 
 function fillMissing($board) {
