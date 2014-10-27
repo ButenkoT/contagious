@@ -39,14 +39,15 @@ $(document).ready(function(){
     });
 
 
-  //check on the board if any 3 or more inline vertical or horizontal
+  //check on the board if any 3 or more inline vertical or horizontal (match_3)
 
 
-  
+  //should be not more then 2 clicked cells at a time
+  function(
 
   //check if 2nd clicked cell is in a range of 1st clicked cell via coordinates
     //swap clicked board-cell with 2nd clicked cell
-      //make check on the board
+      //make check on the board(match_3)
         //if any matches leave the move
         // delete matches
         //calculate sum
