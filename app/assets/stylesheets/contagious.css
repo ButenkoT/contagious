@@ -79,14 +79,72 @@ button.launch_level_popup:hover {
 	background-color: rgb(150,10,150);
 }
 
-button.level_welcome {
-	background: url(contagious_red_crosshairs.svg) no-repeat center center fixed; 
-}
-
 .level_selection_container {
 	border: 1px solid green;
 	position: relative;
 	max-width: 1200px;
+}
+
+.level_link {
+	position: absolute;
+	height: 10%;
+	width: 10%;
+}
+
+#one.level_link {
+	top: 82%;
+	left: 38%;
+}
+
+#two.level_link {
+	top: 82%;
+	left: 52%;
+}
+
+#three.level_link {
+	top: 62%;
+	left: 45%;
+}
+
+#four.level_link {
+	top: 52%;
+	left: 82%;
+}
+
+#five.level_link {
+	top: 52%;
+	left: 8%;
+}
+
+#six.level_link {
+	top: 35%;
+	left: 62%;
+}
+
+#seven.level_link {
+	top: 35%;
+	left: 27%;
+}
+
+#eight.level_link {
+	top: 27%;
+	left: 39%;
+}
+
+#nine.level_link {
+	top: 27%;
+	left: 49%;
+}
+
+#ten.level_link {
+	top: 10%;
+	left: 45%;
+}
+
+
+.person_button_container {
+	border: 1px dashed black;
+	position: relative;
 }
 
 #person_image {
