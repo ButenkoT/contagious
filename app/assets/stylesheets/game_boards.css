@@ -65,3 +65,21 @@
 .clicked{
   background-color: grey;
 }
+
+.health_bar_background {
+  background-color: #40403F;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  top: -25.5em;
+  left: 4em;
+  border:3px solid white;
+}
+
+#my_canvas {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  z-index: 100000;
+}
