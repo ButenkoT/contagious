@@ -1,8 +1,8 @@
 
-var types = [1, 2, 3, 4, 5];
+var types = [1, 2, 3, 4, 5, 6];
 
 function generateItem() {
-  return types[Math.floor(Math.random() * 5)];
+  return types[Math.floor(Math.random() * types.length)];
 }
 
 function generate() {
@@ -12,19 +12,38 @@ function generate() {
 
 }
 
-//creating a board with handlebar template and filling it with cells with particular value (data-type from 1 to 5)
-function createBoard($board) {
 
+function fillBoard($board) {
   var template = Handlebars.compile($('#gameTemplate').html());
   $board.empty();
-
   //with handlebar append board-cells with value in the game-board
   _(generate()).each(function(type) {
     var $cell = $(template({type: type}))
       .appendTo($board);
   });
+  setCoordinates($board);  
 
-  setCoordinates($board);
+
+  var currentScore = $board.data('score') || 0;  
+  destroyMatches($board);
+  $board.data('score', currentScore);
+}
+
+//creating a board with handlebar template and filling it with cells with particular value (data-type from 1 to 5)
+function createBoard($board) {
+  fillBoard($board);
+  $board.data('score', 0);
+}
+
+function shuffle($board) {
+  fillBoard($board);
+
+  var currentScore = $board.data('score') || 0;
+  currentScore = currentScore - 100;
+  if (currentScore < 0) {
+    currentScore = 0;
+  }
+  $board.data('score', currentScore);
 }
 
 
@@ -64,7 +83,7 @@ function swap($new, $old) {
 }
 
 
-//finds the position of particular cell
+//finds the cell on particular position
 function getCell($board, coordinates) {
   return $board.find('.board-cell').eq(coordinates[0] + coordinates[1] * 10);
 }
@@ -85,32 +104,60 @@ function isNear($new, $old) {
 };
 
 
-function destroyMatchesItem(index, item) {
-  var $item = $(item),
-  coords = getCoordinates(index);
+function destroyMatchesItem($board, cell, index) {
+  var $cell = $(cell),
+  coords = getCoordinates(index),
+  x = coords[0],
+  y = coords[1],
+  toDestroyRight = [],
+  toDestroyDown = [];
+
+
+  for( var i = 1; (i <= 4) && (x + i <= 9) &&
+    (toDestroyRight.length === i - 1) && $cell.attr('data-type') !== 0; i ++) {
+    var $cellRight = getCell($board, [x + i, y]);
+    if ($cellRight.attr('data-type') === $cell.attr('data-type')){
+      toDestroyRight.push($cellRight[0]);
+    }
+
+  }
+
+  for( var i = 1; (i <= 4) && (y + i <= 9) &&
+    (toDestroyDown.length === i - 1) && $cell.attr('data-type') !== 0; i ++) {
+    var $cellDown = getCell($board, [x, y + i]);
+    if ($cellDown.attr('data-type') === $cell.attr('data-type')) {
+      toDestroyDown.push($cellDown[0]);
+    }
+
+  }
+
+  if ( toDestroyRight.length >= 2) {
+    $(toDestroyRight.concat(cell)).attr('data-type', 0);
+  }
+
+  if ( toDestroyDown.length >= 2) {
+    $(toDestroyDown.concat(cell)).attr('data-type', 0);
+  }
+
+  return $board.find('.board-cell[data-type="0"]').length > 0;
 }
 
 //check on if any 3 matches present and turns data-type matches of 3 and more vertical or horizontal into 0 and calculate the score of destroyed elements
 function destroyMatches($board, isDestoyed) {
+  var $cells = $board.find('.board-cell'),
+  somethingDestroyed = false;
 
-  $board.find('.board-cell').each(destroyMatchesItem)
+  for(var i = 0; i < $cells.length && !somethingDestroyed; i = i + 1) {
+    somethingDestroyed = destroyMatchesItem($board, $cells[i], i);
+  }
+  
 
-
-
-/*
-    Xoo
-    o
-    o
-
-*/ 
-
-
-  //
-  if ($board.find('.board-cell[data-type="0"]').length > 0) {
-    $board.data('score', $board.data('score') + 10);
+  if (somethingDestroyed) {
+    $board.data('score', ($board.data('score') || 0) + 10);
 
     fillMissing($board);
 
+    console.log('recursive destroy');
     return destroyMatches($board, true);
   }
 
@@ -120,7 +167,7 @@ function destroyMatches($board, isDestoyed) {
 
 //taking all cells with data-type 0 and replace them with a new random data-type(1..5)
 function fillMissing($board) {
-  $board.find('.board-cell[data-type="0"]').each(function(item) {
+  $board.find('.board-cell[data-type="0"]').each(function(index, item) {
     $(item).attr('data-type', generateItem());
   });
   return true;
@@ -173,8 +220,8 @@ $(document).ready(function(){
       swap($cell, $prev);
       if (destroyMatches($board, false)) {
         // $board.data('score')
-
-          fillMissing($board);
+          console.log('somethingDestroyed!!!!');
+          console.log('Current score:', $board.data('score'));
         } else {
           swap($cell, $prev);
         }
