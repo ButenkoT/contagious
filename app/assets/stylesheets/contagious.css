@@ -84,15 +84,18 @@ button.level_welcome {
 }
 
 .level_selection_container {
+	border: 1px solid green;
 	position: relative;
+	max-width: 1200px;
 }
 
 #person_image {
-	position: center;
+	position: relative;
 	display: block;
-	margin: auto;
-	height: 50%;
-	width: 50%;
+	margin: 0 auto;
+	padding-top:10px;
+	height: 85%;
+	width: 85%;
 }
 
 #health_bar_person {
@@ -108,10 +111,13 @@ button.level_welcome {
 }
 
 #virus_image {
+	border: 1px solid black;
+	padding: 0px;
 	position: absolute;
 	top: 0;
-	right: 100px;
-	margin: auto;
+	right: 10px;
+	height: 25%;
+	width: 25%;
 }
 
 .window {
