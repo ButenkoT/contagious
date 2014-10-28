@@ -93,9 +93,9 @@ button.level_welcome {
 	position: relative;
 	display: block;
 	margin: 0 auto;
-	padding-top:10px;
-	height: 85%;
-	width: 85%;
+	padding-top:5px;
+	height: 90%;
+	width: 90%;
 }
 
 #health_bar_person {
