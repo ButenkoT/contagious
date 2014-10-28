@@ -37,13 +37,39 @@
 
 </div>
 
-<!-- LEVEL WELCOME LIGHT BOX - needs to be called on click on level button -->
+
+<!-- LEVEL WELCOME POPUP - needs to be called on click on level button -->
+
 
 <div id="launch_level" class="white-popup mfp-hide">
-  <h2 class="launch_level_popup">Welcome to level 1</h2>
-  <h3 class="launch_level_popup">Instructions: </h3>
-  <p class="launch_level_popup">There are no specific instructions for the first level</p>
+  <h2 class="popup">Welcome to level 1</h2>
+  <h3 class="popup">Instructions: </h3>
+  <p class="popup">There are no specific instructions for the first level</p>
   <button class="launch_level_popup">Start level</button>
+</div>
+
+
+<!-- ABOUT POPUP - needs to be connected to click on nav bar element -->
+
+<a href="#about_popup" class="about_popup_launch">About</a>
+<div id="about_popup" class="white-popup mfp-hide">
+	<h2 class="popup">About Contagious</h2>
+	<h3 class="popup">Goal of the game</h3>
+	<p class="popup">You are playing the role of a virus who is infecting a person trying to cause this person to die.</p>
+	<h3 class="popup">How it works</h3>
+	<p class="popup">The person has a health score that starts at 100%. You as the virus also have a health score which starts at 100%. You want do decrease the person's health score to 0% to cause it to die. Along the way, some happenings can cause your health score to decrease as well, e.g. if the person receives a medicine to fight against you. If your health score reaches 0% while the person's health score is still above 0%, you die and lose the game.</p>
+	<h3 class="popup">Levels</h3>
+	<p class="popup">The game has 10 levels. Through accomplishing a level you decrease the person's health score by 10% points. You accomplish a level by earning a minimum of 100 points within the restrictions of the specific level (which e.g. could be a time contraint of 2 minutes). You can only proceed to the next level after successfully completing the previous level.</p>
+	<h3 class="popup">Handling the game boards</h3>
+	<p class="popup">The game is played by swiping symbols on a board, in any direction (so long as it is not blocked), to create sets of 3 or more matching symbols. When matched, the action represented by the symbol will be applied. The matching symbols disappear from the board and shift the symbols above them.</p>
+	<h3 class="popup">Symbols, actions, points</h3>
+	<ul class="popup">
+		<li class="popup"><img src="/assets/Blue_germ.svg" width="100" height="100"></li>
+		<li class="popup"></li>
+		<li class="popup"></li>
+		<li class="popup"></li>
+		<li class="popup"></li>
+	</ul>
 </div>
 
 
