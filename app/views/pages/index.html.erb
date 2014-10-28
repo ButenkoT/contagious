@@ -1,1 +1,21 @@
 
+<div class="window">
+	<div>
+		<%= image_tag('contagious_logo.svg', :id => 'logo') %>
+	</div>
+	<div class="window_column_left"></div>
+	<div class="window_column_right">
+		<div class="registration_box_grey">
+			<div class="registration_box_white">
+					<h2>Register New Player</h2>
+					<%= form_for @user do |f| %>
+					<p><%= f.text_field :nickname, :placeholder => "Nickname" %></p>
+					<p><%= f.text_field :email, :placeholder => "Email address" %></p>
+					<p><%= f.password_field :password, :placeholder => "Password" %></p>
+					<p><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></p>
+					<%= f.submit %>
+					<% end %>
+			</div>
+		</div>
+	</div>
+</div>
