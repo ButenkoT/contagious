@@ -77,16 +77,7 @@ function getCell($board, coordinates) {
   return $board.find('.board-cell').eq(coordinates[0] + coordinates[1] * 10);
 }
 
-/**
 
-0 -- $new
-x -- possible $old
-
-   .x.
-   x0x...Y
-   .x.
-
-*/
 function isNear($new, $old) {
   var newcoord = getCoordinates(getNumber($new));
   var oldcoord = getCoordinates(getNumber($old));
@@ -100,10 +91,43 @@ function isNear($new, $old) {
   };
 };
 
-function destroyMatches($board) {
+
+
+
+
+
+function destroyMatches($board, isDestoyed) {
+
+
+  // do something
+/*
+
+$board.find('asdfasdf').eash()
+
+    Xoo
+    o
+    o
+
+*/
+  // 
+
+
+
+  if ($board.find('.board-cell[data-type="0"]').length > 0) {
+    $board.data('score', $board.data('score') + 12341234);
+
+    fillMissing($board);
+
+    return destroyMatches($board, true);
+  }
+
+
 //check on the board if any 3 or more inline vertical or horizontal (match_3)
   // TODO: fill me
-  return true;
+  //
+
+
+  return isDestoyed;
 }
 
 function fillMissing($board) {
@@ -115,24 +139,7 @@ function fillMissing($board) {
 //check if 2nd clicked cell is in a range of 1st clicked cell via coordinates
 
 
-var directions = {
-  up: {
-    x: 0,
-    y: -1
-  },
-  down: {
-    x: 0,
-    y: 1
-  },
-  right: {
-    x: 1,
-    y: 0
-  },
-  left: {
-    x: -1,
-    y: 0
-  }
-};
+
   //swap clicked board-cell with 2nd clicked cell
     //make check on the board(match_3)
       //if any matches leave the move
@@ -178,13 +185,16 @@ $(document.body)
       
     // 3. something was clicked and it is legal
     swap($cell, $prev);
-    if (destroyMatches($board)) {
+    if (destroyMatches($board, false)) {
+// $board.data('score')
+
       fillMissing($board);
     } else {
       swap($cell, $prev);
     }
 
     $board.find('.board-cell.clicked').removeClass('clicked');
+
 
   });
 
