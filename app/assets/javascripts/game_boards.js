@@ -126,24 +126,7 @@ function fillMissing($board) {
 //check if 2nd clicked cell is in a range of 1st clicked cell via coordinates
 
 
-var directions = {
-  up: {
-    x: 0,
-    y: -1
-  },
-  down: {
-    x: 0,
-    y: 1
-  },
-  right: {
-    x: 1,
-    y: 0
-  },
-  left: {
-    x: -1,
-    y: 0
-  }
-};
+
   //swap clicked board-cell with 2nd clicked cell
     //make check on the board(match_3)
       //if any matches leave the move
