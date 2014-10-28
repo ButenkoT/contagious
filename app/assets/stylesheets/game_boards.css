@@ -83,3 +83,7 @@
   left: 3em;
   z-index: 100000;
 }
+
+.about_popup_launch {
+  color: white;
+}

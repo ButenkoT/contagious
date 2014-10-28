@@ -141,12 +141,12 @@ button.level_welcome {
 }
 
 .profile_box_grey {
-	width: 111%;
-	height: 55%; 
+	width: 80%;
+	height: 50%; 
 	display:inline-block;
 	position:absolute;
 	background-color: #dbdbdb;
-	padding-top: 60px;
+	padding-top: 5px;
 	bottom: 3em;
 	right: 4em;
 	-webkit-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
@@ -156,20 +156,20 @@ button.level_welcome {
 
 .profile_box_white {
 	width: 308px;
-	height: 200px; 
-	display:inline-block;
-	position:relative;
+	height: 230px;
+	display: inline-block;
+	position: relative;
 	font-family: Helvetica;
 	font-size: 13px;
 	text-align: left;
-	margin: 20px;
+	margin: 60px;
 	background-color: white;
 	-webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
 	color: black;
-	padding-left: 25px;
-	padding-top: 0px;
+	padding-left: 59px;
+	padding-top: 26px;
 }
 
 input {
@@ -189,6 +189,26 @@ height: 28px;
    box-shadow: rgba(0,0,0,1) 0 1px 0;
    color: white;
    font-size: 14px;
+   font-family: helvetica;
+}
+
+.edit_button {
+	 border-top: 1px solid #636363;
+   background: #ff0000;
+   padding: 5px 20px;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: helvetica;
+}
+
+a {
+	text-decoration: none;
 }
 
 #germ {
@@ -202,6 +222,14 @@ height: 28px;
 	left: 2em;
 	top: 2em;
 	width: 60%;
+}
+
+#leaderboard_logo {
+	position: absolute;
+	left: 2em;
+	top: 2em;
+	width: 35%;
+
 }
 
 .registration_box_grey {
@@ -250,5 +278,37 @@ height: 28px;
 	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
 	padding-left: 4em;
 	font-family: helvetica;
+}
+
+ol {
+	position:relative;
+	width: 60%;
+	min-height: 600px;
+	margin-left: 15%;
+	margin-top: 15%;
+	display:inline-block;
+
+}
+
+ol li {
+	background-color: rgba(0,0,0,0.5);
+	font-family: helvetica;
+	font-size: 22px;
+	height: 50px;
+	padding-top: 20px;
+	padding-left: 15px;
+	color: white;
+}
+
+.leaderboard_heading {
+	font-family: helvetica;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+	font-size: 39px;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	position: absolute;
+	top: 144px;
+	left: 486px;
 }
 
