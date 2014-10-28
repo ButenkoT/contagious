@@ -50,11 +50,11 @@ nav li:hover{
   margin: 20px auto;
 }
 
-h2.launch_level_popup {
+h2.popup {
 	text-align: center;
 }
 
-p.launch_level_popup {
+p.popup {
 	margin-bottom: 2em;
 }
 
@@ -118,8 +118,7 @@ button.level_welcome {
 
 }
 
-.window_column_left,
-.window_column_right {
+.window_column_left {
 	width: 49%;
 }
 
@@ -132,6 +131,7 @@ button.level_welcome {
 	display: inline-block;
 	position: relative;
 	min-height: 100vh;
+  width: 45%;
 }
 
 .profile_box_grey {
@@ -140,10 +140,12 @@ button.level_welcome {
 	display:inline-block;
 	position:absolute;
 	background-color: #dbdbdb;
-	box-shadow:5px 5px 5px rgba(0,0,0,0.3);
 	padding-top: 60px;
 	bottom: 2em;
 	right: 4em;
+	-webkit-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
 }
 
 .profile_box_white {
@@ -152,11 +154,13 @@ button.level_welcome {
 	display:inline-block;
 	position:relative;
 	font-family: Helvetica;
-	font-size: 12px;
+	font-size: 13px;
 	text-align: left;
 	margin: 20px;
 	background-color: white;
-	box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
 	color: black;
 	padding-left: 25px;
 	padding-top: 28px;
@@ -166,4 +170,43 @@ button.level_welcome {
 	position: absolute;
 	left: 25%;
 	top: -46%;
+}
+
+#logo {
+	position: absolute;
+	left: 2em;
+	top: 2em;
+	width: 60%;
+}
+
+.registration_box_grey {
+	width: 378px;
+	height: 315px; 
+	display:inline-block;
+	position:absolute;
+	background-color: #dbdbdb;
+	padding-top: 10px;
+	bottom: 2em;
+	right: 4em;
+	-webkit-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
+}
+
+.registration_box_white {
+	width: 308px;
+	height: 241px; 
+	display:inline-block;
+	position:relative;
+	font-family: Helvetica;
+	font-size: 12px;
+	text-align: left;
+	margin: 20px;
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	color: black;
+	padding-left: 25px;
+	padding-top: 28px;
 }
