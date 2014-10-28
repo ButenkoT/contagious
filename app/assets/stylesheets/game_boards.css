@@ -47,21 +47,39 @@
 }
 
 [data-type="2"]{
-  content: url(Blue_germ.svg); 
+  content: url(blue_germ_60x60.svg); 
 }
 
 [data-type="3"]{
-   content: url(Purple_germ.svg);
+   content: url(purple_germ_60x60.svg);
 }
 
 [data-type="4"]{
-   content: url(Pink_germ.svg);
+   content: url(pink_germ_60x60.svg);
 }
 
 [data-type="5"]{
-   content: url(Orange_germ.svg);
+   content: url(orange_germ_60x60.svg);
 }
 
 .clicked{
   background-color: grey;
+}
+
+.health_bar_background {
+  background-color: #40403F;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  top: -25.5em;
+  left: 4em;
+  border:3px solid white;
+}
+
+#my_canvas {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  z-index: 100000;
 }
