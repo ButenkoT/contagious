@@ -98,26 +98,26 @@ button.level_welcome {
 	width: 90%;
 }
 
-#health_bar_person {
-	position: absolute;
-	top: 2em;
+.health_bar_background {
+	position: relative;
+	top: 20px;
 	left: 2em;
-	width: 10%;
-	height: 10%;
-	min-width: 250px;
-	min-height: 250px;
-	margin: auto;
+	min-width: 200px;
+	min-height: 200px;
 	text-align: left;
+	border:1ps dashed green;
 }
 
 #virus_image {
-	border: 1px solid black;
-	padding: 0px;
+	border: 5px solid black;
+	border-radius: 100%;
+	padding: 10px;
 	position: absolute;
-	top: 0;
+	top: 15px;
 	right: 10px;
 	height: 25%;
 	width: 25%;
+	background-color: rgba(225,225,225,1);
 }
 
 .window {

@@ -1,14 +1,14 @@
 
 var types = [1, 2, 3, 4, 5];
 
+function generateItem() {
+  return types[Math.floor(Math.random() * 5)];
+}
+
 function generate() {
-  
-  var type = [1, 2, 3, 4, 5];
 
   //give us 100 values step by step randomisizng our type array values
-  return _.range(0, 100, 1).map(function(){
-    return types[Math.floor(Math.random() * 5)];
-  });
+  return _.range(0, 100, 1).map(generateItem);
 
 }
 
@@ -85,10 +85,15 @@ function isNear($new, $old) {
 };
 
 
+function destroyMatchesItem(index, item) {
+  var $item = $(item),
+  coords = getCoordinates(index);
+}
+
 //check on if any 3 matches present and turns data-type matches of 3 and more vertical or horizontal into 0 and calculate the score of destroyed elements
 function destroyMatches($board, isDestoyed) {
 
-  $board.find('.board-cell').each()
+  $board.find('.board-cell').each(destroyMatchesItem)
 
 
 
@@ -115,7 +120,9 @@ function destroyMatches($board, isDestoyed) {
 
 //taking all cells with data-type 0 and replace them with a new random data-type(1..5)
 function fillMissing($board) {
-  $board.find('.board-cell[data-type="0"]').each(generate());
+  $board.find('.board-cell[data-type="0"]').each(function(item) {
+    $(item).attr('data-type', generateItem());
+  });
   return true;
 }
 
