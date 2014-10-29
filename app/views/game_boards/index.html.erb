@@ -57,15 +57,14 @@
 <!-- LEVEL WELCOME POPUP - needs to be called on click on level button -->
 
 
-<div id="launch_level" class="white-popup mfp-hide">
-
-</div>
 
 <script type="template/handlebars" id="launchLevelTemplate" >
+	<div id="launch_level" class="white-popup">
 		<h2>Welcome to level {{currentLevel}}!</h2>
 		<h3 class="popup">Instructions: </h3>
-  		<p class="popup">There are no specific instructions for thislevel</p>
-  		<button class="launch_level_popup" data-level-number={{currentLevel}}>Start level</button>
+		<p class="popup">There are no specific instructions for thislevel</p>
+		<button class="launch_level_popup" data-level-number={{currentLevel}}>Start level</button>
+	</div>
 </script>
 
 

@@ -26,8 +26,9 @@
   <div class='container'>
     <%= yield %>
   </div>
-  
-    <div id="about_popup" class="white-popup mfp-hide">
+
+  <script type="text/html" id="aboutPopupTemplate" >
+    <div id="about_popup" class="white-popup">
       <h2 class="popup">About Contagious</h2>
       <h3 class="popup">Goal of the game</h3>
       <p class="popup">You are playing the role of a virus who is infecting a person trying to cause this person to die.</p>
@@ -46,6 +47,8 @@
         <li class="popup"></li>
       </ul>
     </div>
+  </script>
+
 
 
 </body>

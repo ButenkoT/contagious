@@ -183,41 +183,7 @@ function fillMissing($board) {
 $(document).ready(function () {
 
 
-  $('.about_popup_launch').magnificPopup({
-    type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-  });
-
-  $('.level_link').magnificPopup({
-    type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-  });
-
-
   var levelsDone = [];
-
-
-  function levelLaunch() {
-
-    // on click of the level button the currentLevel variable needs to be set and the launch level lightbox shall be populated.
-
-    $(".level_link").on('click', function (event) {
-      event.preventDefault();
-      var currentLevel = $(this).data('level-number');
-
-      // Create html template with Handlebars by refering to the html provided in the index.html in the script tag with the id launchLevelTemplate
-      var levelLaunchHTML = Handlebars.compile($('#launchLevelTemplate').html());
-
-      //Create the actual html to be inserted based on the template that refers to the context, in this case taking the context from "level"
-      var HTMLContext = levelLaunchHTML({currentLevel: currentLevel});
-
-      //Insert the created html into the div in the index.html file with the id launch_level
-      $('#launch_level').prepend(HTMLContext);
-
-    });
-  };
-
-  levelLaunch();
 
 
   //each cell reacts on click
@@ -262,17 +228,49 @@ $(document).ready(function () {
       $board.find('.board-cell.clicked').removeClass('clicked');
 
 
+    })
+
+    .on('click', '.level_link', function (event) {
+      event.preventDefault();
+      var currentLevel = $(this).data('level-number');
+
+      // Create html template with Handlebars by refering to the html provided in the index.html in the script tag with the id launchLevelTemplate
+      var levelLaunchHTML = Handlebars.compile($('#launchLevelTemplate').html());
+
+      //Create the actual html to be inserted based on the template that refers to the context, in this case taking the context from "level"
+      var HTMLContext = levelLaunchHTML({currentLevel: currentLevel});
+
+
+      $.magnificPopup.open({
+        items: {
+          src: HTMLContext, // can be a HTML string, jQuery object, or CSS selector
+          type: 'inline',
+          midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        }
+      });
+
+    })
+
+    //shuffle button
+    .on('click', '.shuffle-board', function (event) {
+      event.preventDefault();
+      shuffle($('.game-board'));
+    })
+
+    .on('click', '.about_popup_launch', function (event) {
+      $.magnificPopup.open({
+        items: {
+          src: $('#aboutPopupTemplate').html(),
+          type: 'inline',
+          midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        }
+      });
     });
 
 
   createBoard($('.game-board'));
 
 
-  //shuffle button
-  $('.shuffle-board').on('click', function (event) {
-    event.preventDefault();
-    shuffle($('.game-board'));
-  });
 });
 
 
