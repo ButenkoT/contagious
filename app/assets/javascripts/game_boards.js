@@ -270,6 +270,10 @@ $(document.body)
 
 
     createBoard($('.game-board'));
+
+$('.shuffle-board').on('click', function () {
+      shuffle($board);
+});
 });
 
 
