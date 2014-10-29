@@ -34,34 +34,35 @@
   font-size: 10px;
 }
 
-[data-type]{
+[data-cellType]{
   width: 50px;
   height: 50px;/*
   border-radius: 100%;*/
   padding:0px;
 }
 
-[data-type="1"]{ 
+[data-cellType="1"]{ 
   content: url(pill_60x60.svg);
 }
 
-[data-type="2"]{
+[data-cellType="2"]{
   content: url(blue_germ_60x60.svg); 
 }
 
-[data-type="3"]{
+[data-cellType="3"]{
    content: url(purple_germ_60x60.svg);
 }
 
-[data-type="4"]{
+[data-cellType="4"]{
    content: url(pink_germ_60x60.svg);
 }
 
-[data-type="5"]{
+[data-cellType="5"]{
    content: url(orange_germ_60x60.svg);
 }
 
-[data-type="6"]{
+[data-cellType="6"]{
+  content: url(yellow_germ_60x60.svg);
 }
 
 .clicked{
@@ -85,7 +86,7 @@
   left: 1.3em;
   z-index: 100000;
 }
-
+/*
 .about_popup_launch {
   color: white;
-}
+}*/

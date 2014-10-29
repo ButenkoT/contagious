@@ -1,8 +1,8 @@
 
-var types = [1, 2, 3, 4, 5, 6];
+var cellTypes = [1, 2, 3, 4, 5, 6];
 
 function generateItem() {
-  return types[Math.floor(Math.random() * types.length)];
+  return cellTypes[Math.floor(Math.random() * cellTypes.length)];
 }
 
 function generate() {
@@ -17,8 +17,8 @@ function fillBoard($board) {
   var template = Handlebars.compile($('#gameTemplate').html());
   $board.empty();
   //with handlebar append board-cells with value in the game-board
-  _(generate()).each(function(type) {
-    var $cell = $(template({type: type}))
+  _(generate()).each(function(cellType) {
+    var $cell = $(template({cellType: cellType}))
       .appendTo($board);
   });
   setCoordinates($board);  
@@ -76,9 +76,9 @@ function getCoordinates(number) {
 
 //swapping 2 cells by changing their data-type 
 function swap($new, $old) {
-  var _type = $new.attr('data-type');
-  $new.attr('data-type', $old.attr('data-type'));
-  $old.attr('data-type', _type);
+  var _type = $new.attr('data-cellType');
+  $new.attr('data-cellType', $old.attr('data-cellType'));
+  $old.attr('data-cellType', _type);
   $('.board-cell').removeClass('clicked');
 }
 
@@ -114,35 +114,35 @@ function destroyMatchesItem($board, cell, index) {
 
 
   for( var i = 1; (i <= 4) && (x + i <= 9) &&
-    (toDestroyRight.length === i - 1) && $cell.attr('data-type') !== 0; i ++) {
+    (toDestroyRight.length === i - 1) && $cell.attr('data-cellType') !== 0; i ++) {
     var $cellRight = getCell($board, [x + i, y]);
-    if ($cellRight.attr('data-type') === $cell.attr('data-type')){
+    if ($cellRight.attr('data-cellType') === $cell.attr('data-cellType')){
       toDestroyRight.push($cellRight[0]);
     }
 
   }
 
   for( var i = 1; (i <= 4) && (y + i <= 9) &&
-    (toDestroyDown.length === i - 1) && $cell.attr('data-type') !== 0; i ++) {
+    (toDestroyDown.length === i - 1) && $cell.attr('data-cellType') !== 0; i ++) {
     var $cellDown = getCell($board, [x, y + i]);
-    if ($cellDown.attr('data-type') === $cell.attr('data-type')) {
+    if ($cellDown.attr('data-cellType') === $cell.attr('data-cellType')) {
       toDestroyDown.push($cellDown[0]);
     }
 
   }
 
   if ( toDestroyRight.length >= 2) {
-    $(toDestroyRight.concat(cell)).attr('data-type', 0);
+    $(toDestroyRight.concat(cell)).attr('data-cellType', 0);
   }
 
   if ( toDestroyDown.length >= 2) {
-    $(toDestroyDown.concat(cell)).attr('data-type', 0);
+    $(toDestroyDown.concat(cell)).attr('data-cellType', 0);
   }
 
-  return $board.find('.board-cell[data-type="0"]').length > 0;
+  return $board.find('.board-cell[data-cellType="0"]').length > 0;
 }
 
-//check on if any 3 matches present and turns data-type matches of 3 and more vertical or horizontal into 0 and calculate the score of destroyed elements
+//check on if any 3 matches present and turns data-cellType matches of 3 and more vertical or horizontal into 0 and calculate the score of destroyed elements
 function destroyMatches($board, isDestoyed) {
   var $cells = $board.find('.board-cell'),
   somethingDestroyed = false;
@@ -165,10 +165,10 @@ function destroyMatches($board, isDestoyed) {
 }
 
 
-//taking all cells with data-type 0 and replace them with a new random data-type(1..5)
+//taking all cells with data-cellType 0 and replace them with a new random data-cellType(1..5)
 function fillMissing($board) {
-  $board.find('.board-cell[data-type="0"]').each(function(index, item) {
-    $(item).attr('data-type', generateItem());
+  $board.find('.board-cell[data-cellType="0"]').each(function(index, item) {
+    $(item).attr('data-cellType', generateItem());
   });
   return true;
 }
