@@ -1,15 +1,16 @@
 var cellTypes = [1, 2, 3, 4, 5, 6];
 
+
 function generateItem() {
   return cellTypes[Math.floor(Math.random() * cellTypes.length)];
 }
 
-function generate() {
 
+function generate() {
   //give us 100 values step by step randomisizng our type array values
   return _.range(0, 100, 1).map(generateItem);
-
 }
+
 
 function setScore($board, score) {
   $board.data('score', score);
@@ -34,11 +35,13 @@ function fillBoard($board) {
   setScore($board, currentScore);
 }
 
-//creating a board with handlebar template and filling it with cells with particular value (data-type from 1 to 5)
+
+//creating a board with handlebar template and filling it with cells with particular value (data-type from 1 to 6)
 function createBoard($board) {
   fillBoard($board);
   setScore($board, 0);
 }
+
 
 function shuffle($board) {
   fillBoard($board);
@@ -56,7 +59,7 @@ function shuffle($board) {
 function setCoordinates($board) {
   $board.find('.board-cell').each(function (index, cell) {
     var $cell = $(cell),
-      number = getNumber($cell)//calls for function gerNumber and passing it cell from the DOM
+      number = getNumber($cell)//calls for function getNumber and passing it cell from the DOM
     coord = getCoordinates(number); //calls for function getCoordinates and passing the number of element
 
     $cell.find('.cell-x').text(coord[0]);//coordinate x is a 1st el of array
@@ -108,6 +111,7 @@ function isNear($new, $old) {
   }
 }
 
+
 //destroying matches by making checks on right and bottom for every cell 
 function destroyMatchesItem($board, cell, index) {
   var $cell = $(cell),
@@ -145,6 +149,7 @@ function destroyMatchesItem($board, cell, index) {
 
   return $board.find('.board-cell[data-type="0"]').length > 0;
 }
+
 
 //check on if any 3 matches present and turns data-type matches of 3 and more vertical or horizontal into 0 and calculate the score of destroyed elements
 function destroyMatches($board, isDestoyed) {
@@ -229,6 +234,7 @@ $(document).ready(function () {
 
     })
 
+
     .on('click', '.level_link', function (event) {
       event.preventDefault();
       var currentLevel = $(this).data('level-number');
@@ -289,8 +295,6 @@ $(document).ready(function () {
       createBoard($('.game-board'));
     })
   ;
-
-
 
 
 });
