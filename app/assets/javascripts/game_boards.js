@@ -191,35 +191,27 @@ $(document).ready(function(){
 
 
 
-//   function levelLaunch() {
+  function levelLaunch() {
 
-//     // on click of the level button the currentLevel variable needs to be set and the launch level lightbox shall appear. How to write this in an efficient way to pass on the right level depending on which button the user clicked?
-
+    // on click of the level button the currentLevel variable needs to be set and the launch level lightbox shall be populated. 
    
-//     // var level = [{currentLevel: 1}, {currentLevel: 2}, {currentLevel: 3}];
+    $(".level_link").on('click', function(event) {
+      event.preventDefault();
+      var currentLevel = $(this).data('level-number');
+    
+      // Create html template with Handlebars by refering to the html provided in the index.html in the script tag with the id launchLevelTemplate
+      var levelLaunchHTML = Handlebars.compile($('#launchLevelTemplate').html());
 
-//     $(".level_link").on('click', function(event) {
-//       event.preventDefault();
-// debugger
-//       var currentLevel = $(".level_link").data('levelNumber');
-//       debugger
+      //Create the actual html to be inserted based on the template that refers to the context, in this case taking the context from "level"
+      var HTMLContext = levelLaunchHTML({currentLevel: currentLevel});
+
+      //Insert the created html into the div in the index.html file with the id launch_level
+      $('#launch_level').prepend( HTMLContext );
       
-//       // Create html template with Handlebars by refering to the html provided in the index.html in the script tag with the id launchLevelTemplate
-//       var levelLaunchHTML = Handlebars.compile($('#launchLevelTemplate').html());
-      
-//       // $.each(level, function(index, thisLevel) {
-//       //   $('#launch_level').prepend( levelLaunchHTML(thisLevel) );
-//       // });
+    });
+  };
 
-//       //Create the actual html to be inserted based on the template that refers to the context, in this case taking the context from "level"
-//       var HTMLContext = levelLaunchHTML({currentLevel: 10});
-
-//       //Insert the created html into the div in the index.html file with the id launch_level
-//       $('#launch_level').prepend( HTMLContext );
-      
-//     });
-
-//     levelLaunch();
+    levelLaunch();
 
 
 //each cell reacts on click 
