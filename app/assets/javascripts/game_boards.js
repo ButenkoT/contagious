@@ -1,8 +1,8 @@
 
-var types = [1, 2, 3, 4, 5, 6];
+var cellTypes = [1, 2, 3, 4, 5, 6];
 
 function generateItem() {
-  return types[Math.floor(Math.random() * types.length)];
+  return cellTypes[Math.floor(Math.random() * cellTypes.length)];
 }
 
 function generate() {
@@ -17,8 +17,8 @@ function fillBoard($board) {
   var template = Handlebars.compile($('#gameTemplate').html());
   $board.empty();
   //with handlebar append board-cells with value in the game-board
-  _(generate()).each(function(type) {
-    var $cell = $(template({type: type}))
+  _(generate()).each(function(cellType) {
+    var $cell = $(template({cellType: cellType}))
       .appendTo($board);
   });
   setCoordinates($board);  
