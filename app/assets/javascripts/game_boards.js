@@ -256,6 +256,13 @@ $(document).ready(function () {
       shuffle($('.game-board'));
     })
 
+    //exit game button
+    .on('click', '.exit-game', function (event) {
+      event.preventDefault();
+      setScore($('.game-board'), 0);
+      $.magnificPopup.close(); 
+    })
+
     .on('click', '.about_popup_launch', function (event) {
       event.preventDefault();
 
