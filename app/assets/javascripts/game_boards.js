@@ -2,25 +2,10 @@
 var types = [1, 2, 3, 4, 5];
 
 
+
+
+
 function generate() {
-  $('.about_popup_launch').magnificPopup({
-    type:'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-  });
-
-  // on click of the level button the currentLevel variable needs to be set and the launch level lightbox shall appear. How to write this in an efficient way to pass on the right level depending on which button the user clicked?
-  $('.level_link').magnificPopup({
-  type:'inline',
-  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-  });
-
-	$(".level_link").on('click', function(event) {
-		event.preventDefault();
-		currentLevel = 1;
-		launchLevelLightbox();
-	});
-
-  var type = [1, 2, 3, 4, 5];
 
   //give us 100 values step by step randomisizng our type array values
   return _.range(0, 100, 1).map(function(){
@@ -160,6 +145,52 @@ function fillMissing($board) {
 
 
 $(document).ready(function(){
+
+
+  $('.about_popup_launch').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });
+
+  $('.level_link').magnificPopup({
+  type:'inline',
+  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });
+
+
+
+
+
+//   function levelLaunch() {
+
+//     // on click of the level button the currentLevel variable needs to be set and the launch level lightbox shall appear. How to write this in an efficient way to pass on the right level depending on which button the user clicked?
+
+   
+//     // var level = [{currentLevel: 1}, {currentLevel: 2}, {currentLevel: 3}];
+
+//     $(".level_link").on('click', function(event) {
+//       event.preventDefault();
+// debugger
+//       var currentLevel = $(".level_link").data('levelNumber');
+//       debugger
+      
+//       // Create html template with Handlebars by refering to the html provided in the index.html in the script tag with the id launchLevelTemplate
+//       var levelLaunchHTML = Handlebars.compile($('#launchLevelTemplate').html());
+      
+//       // $.each(level, function(index, thisLevel) {
+//       //   $('#launch_level').prepend( levelLaunchHTML(thisLevel) );
+//       // });
+
+//       //Create the actual html to be inserted based on the template that refers to the context, in this case taking the context from "level"
+//       var HTMLContext = levelLaunchHTML({currentLevel: 10});
+
+//       //Insert the created html into the div in the index.html file with the id launch_level
+//       $('#launch_level').prepend( HTMLContext );
+      
+//     });
+
+//     levelLaunch();
+
 
 //each cell reacts on click 
 $(document.body)

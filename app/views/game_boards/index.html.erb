@@ -6,43 +6,39 @@
 
 <div class="level_selection_container">
 
-
 	<div class="person_button_container">
+
 		<!-- Person image -->
 		<img src="/assets/contagious_body_white.svg" id="person_image" alt="Person-Image">
 
 		<!-- 10 level links -->
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="one"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="one" data-levelNumber="1"></input>
 		
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="two"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="two" data-levelNumber="2"></input>
 	
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="three"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="three" data-levelNumber="3"></input>
 		
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="four"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="four" data-levelNumber="4"></input>
 		
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="five"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="five" data-levelNumber="5"></input>
 		
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="six"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="six" data-levelNumber="6"></input>
 		
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="seven"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="seven" data-levelNumber="7"></input>
 		
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="eight"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="eight" data-levelNumber="8"></input>
 	
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="nine"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="nine" data-levelNumber="9"></input>
 	
-		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="ten"></input>
+		<input type="image" src="/assets/contagious_crosshairs_40x40.svg" href="#launch_level" class="level_link" id="ten" data-levelNumber="10"></input>
 		
 	</div>
 
-	<!-- Person health bar -->
-	<!-- <img src="/assets/health_bar_person.jpg" id="health_bar_person" class="health_bar">
-	</img> -->
-	
+	<!-- Health bar -->
 	<div =class"health_bar">
 		<canvas id="my_canvas" width="100" height="40"></canvas>
-			<div class="health_bar_background">
-			</div>
-
+		<div class="health_bar_background">
+		</div>
 	</div>
 
 	<!-- Virus icon -->
@@ -61,36 +57,26 @@
 <!-- LEVEL WELCOME POPUP - needs to be called on click on level button -->
 
 
+
+
 <div id="launch_level" class="white-popup mfp-hide">
-  <h2 class="popup">Welcome to level 1</h2>
+	
+  
   <h3 class="popup">Instructions: </h3>
   <p class="popup">There are no specific instructions for the first level</p>
   <button class="launch_level_popup">Start level</button>
+
 </div>
+
+<script type="template/handlebars" id="launchLevelTemplate" >
+		<h2>Welcome to level {{currentLevel}}!</h2>
+</script>
 
 
 <!-- ABOUT POPUP - needs to be connected to click on nav bar element -->
 
 <a href="#about_popup" class="about_popup_launch">About</a>
-<div id="about_popup" class="white-popup mfp-hide">
-	<h2 class="popup">About Contagious</h2>
-	<h3 class="popup">Goal of the game</h3>
-	<p class="popup">You are playing the role of a virus who is infecting a person trying to cause this person to die.</p>
-	<h3 class="popup">How it works</h3>
-	<p class="popup">The person has a health score that starts at 100%. You as the virus also have a health score which starts at 100%. You want do decrease the person's health score to 0% to cause it to die. Along the way, some happenings can cause your health score to decrease as well, e.g. if the person receives a medicine to fight against you. If your health score reaches 0% while the person's health score is still above 0%, you die and lose the game.</p>
-	<h3 class="popup">Levels</h3>
-	<p class="popup">The game has 10 levels. Through accomplishing a level you decrease the person's health score by 10% points. You accomplish a level by earning a minimum of 100 points within the restrictions of the specific level (which e.g. could be a time contraint of 2 minutes). You can only proceed to the next level after successfully completing the previous level.</p>
-	<h3 class="popup">Handling the game boards</h3>
-	<p class="popup">The game is played by swiping symbols on a board, in any direction (so long as it is not blocked), to create sets of 3 or more matching symbols. When matched, the action represented by the symbol will be applied. The matching symbols disappear from the board and shift the symbols above them.</p>
-	<h3 class="popup">Symbols, actions, points</h3>
-	<ul class="popup">
-		<li class="popup"><img src="/assets/Blue_germ.svg" width="100" height="100"></li>
-		<li class="popup"></li>
-		<li class="popup"></li>
-		<li class="popup"></li>
-		<li class="popup"></li>
-	</ul>
-</div>
+
 
 
 <!-- GAME BOARD - needs to be called on click of "start level" button in level launch light box -->
