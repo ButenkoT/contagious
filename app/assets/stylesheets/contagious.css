@@ -96,17 +96,7 @@ button.level_welcome {
 	padding-top:5px;
 	height: 90%;
 	width: 90%;
-}
-
-.health_bar_background {
-	position: relative;
-	top: 20px;
-	left: 2em;
-	min-width: 200px;
-	min-height: 200px;
-	text-align: left;
-	border:1ps dashed green;
-}
+}	
 
 #virus_image {
 	border: 5px solid black;
