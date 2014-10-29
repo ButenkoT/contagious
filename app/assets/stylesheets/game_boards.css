@@ -32,17 +32,21 @@
 }
 
 .board-cell {
-    border: 5px solid rgba(0, 0, 0, 0.2);
-    width: 65px;
-    height: 65px;
+    padding: 2px;
+    width: 71px;
+    height: 71px;
+    border-radius: 100%;
     display: inline-block;
     float: left;
 }
 
 [data-type] {
-    width: 65px;
-    height: 65px;
-    padding: 0px;
+    transition: transform ease-out 100ms;
+    transform: rotate(0deg);
+}
+
+[data-type]:hover{
+  transform: rotate(60deg);
 }
 
 [data-type="1"] {
@@ -66,8 +70,9 @@
 }
 
 [data-type="6"] {
-    content: url(yellow_germ_60x60.svg);
+    content: url(yellow_germ_60x60_0.png);
 }
+
 
 .clicked {
     background-color: rgba(0, 0, 0, 0.4);
