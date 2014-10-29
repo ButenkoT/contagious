@@ -233,7 +233,7 @@ a {
 }
 
 .registration_box_grey {
-	width: 111%;
+	width: 97%;
 	height: 54%; 
 	display:inline-block;
 	position:absolute;
@@ -310,5 +310,8 @@ ol li {
 	position: absolute;
 	top: 144px;
 	left: 486px;
+}
+
+.leaderboard_list {
 }
 
