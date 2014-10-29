@@ -70,22 +70,19 @@
 
 
 <!-- GAME BOARD - needs to be called on click of "start level" button in level launch light box -->
-<div class="game-page">
-	<div class="game-board"></div>
 
-	<script type="template/handlebars" id="gameTemplate" >
+<script type="text/html" id="gameTemplate" >
+	<div class="game-page">
+		<div class="game-board"></div>
+		<div class="exit-game game-buttons">Exit</div>
+		<button class="shuffle-board game-buttons">Shuffle</button>
+		<div class="player-score game-buttons"></div>
+	</div>
+</script>
 
-	  <div class="board-cell" data-type="{{cellType}}">
-	    {{type}}
-	    
-	  </div>
+<script type="template/handlebars" id="cellTemplate" >
+  <div class="board-cell" data-type="{{cellType}}">
+    {{type}}
+  </div>
+</script>
 
-	</script>
-
-	<div class="exit-game game-buttons">Exit</div>
-	<button class="shuffle-board game-buttons">Shuffle</button>
-
-	<div class="player-score game-buttons"></div>
-
-
-</div>

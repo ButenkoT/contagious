@@ -18,7 +18,7 @@ function setScore($board, score) {
 
 
 function fillBoard($board) {
-  var template = Handlebars.compile($('#gameTemplate').html());
+  var template = Handlebars.compile($('#cellTemplate').html());
   $board.empty();
 
   //with handlebar append board-cells with value in the game-board
@@ -106,8 +106,7 @@ function isNear($new, $old) {
   } else {
     return false;
   }
-  ;
-};
+}
 
 //destroying matches by making checks on right and bottom for every cell 
 function destroyMatchesItem($board, cell, index) {
@@ -258,6 +257,8 @@ $(document).ready(function () {
     })
 
     .on('click', '.about_popup_launch', function (event) {
+      event.preventDefault();
+
       $.magnificPopup.open({
         items: {
           src: $('#aboutPopupTemplate').html(),
@@ -265,10 +266,24 @@ $(document).ready(function () {
           midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
         }
       });
-    });
+    })
+
+    .on('click', '.launch_level_popup', function(event){
+      event.preventDefault();
+
+      $.magnificPopup.open({
+        items: {
+          src: $('#gameTemplate').html(),
+          type: 'inline',
+          midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        }
+      });
+
+      createBoard($('.game-board'));
+    })
+  ;
 
 
-  createBoard($('.game-board'));
 
 
 });
