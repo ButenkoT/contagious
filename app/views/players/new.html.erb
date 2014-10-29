@@ -1,4 +1,12 @@
-
+<div class="window">
+  <div>
+    <%= image_tag('contagious_logo.svg', :id => 'logo') %>
+  </div>
+  <div class="window_column_left"></div>
+  <div class="window_column_right">
+    <div class="registration_box_grey">
+      <div class="registration_box_white">
+  <h1>Registration</h1>
 <%= form_for @player do |f| %>
 
   <p>   
@@ -17,6 +25,10 @@
     <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %>
   </p>
 
-  <%= f.submit %>
+  <button id="submit_button">Create Player</button>
 
 <% end %>
+      </div>
+    </div>
+  </div>
+</div>
