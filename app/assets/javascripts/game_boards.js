@@ -153,7 +153,7 @@ function destroyMatches($board, isDestoyed) {
   
 
   if (somethingDestroyed) {
-    $board.data('score', ($board.data('score') || 0) + 10);
+    $board.data('score', ($board.data('score') || 0) + $('.board-cell[data-cellType="0"]').length * 2);
 
     fillMissing($board);
 

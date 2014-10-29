@@ -11,33 +11,38 @@
   height:512px;
 }
 
+.game-page{
+  background-color: rgba(0,0,0,0.7);
+  padding: 25px;
+}
+
+.game-buttons{
+  display: inline-block;
+  color: white;
+  vertical-align: top;
+}
+
+
 .game-board{
-  width: 600px;
-  min-height: 600px;
-  margin-left:400px;
-  background-color: rgba(0,0,0,0.6);
+  width: 750px;
+  height: 750px;
+  margin-left: 280px;
+  background-color: rgba(160,50,60,0.6);
+  border: 1px solid yellow;
+  display: inline-block;
 }
 
 .board-cell{
   border: 5px solid rgba(0,0,0,0.2);
-  width:50px;
-  min-height: 50px;
+  width:65px;
+  height: 65px;
   display:inline-block;
   float:left;
 }
 
-.board-cell .coord {
-  display: inline-block;
-  padding: 3px;
-  margin-top: 15px;
-  background: rgba(255,255,255,0.7);
-  font-size: 10px;
-}
-
 [data-cellType]{
-  width: 50px;
-  height: 50px;/*
-  border-radius: 100%;*/
+  width: 65px;
+  height: 65px;
   padding:0px;
 }
 
