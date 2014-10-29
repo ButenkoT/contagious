@@ -51,27 +51,21 @@
 	  image-arrow
 	</div>
 
-	
-
 </div>
 
 
 <!-- LEVEL WELCOME POPUP - needs to be called on click on level button -->
 
 
-
-
 <div id="launch_level" class="white-popup mfp-hide">
-	
-  
-  <h3 class="popup">Instructions: </h3>
-  <p class="popup">There are no specific instructions for the first level</p>
-  <button class="launch_level_popup">Start level</button>
 
 </div>
 
 <script type="template/handlebars" id="launchLevelTemplate" >
 		<h2>Welcome to level {{currentLevel}}!</h2>
+		<h3 class="popup">Instructions: </h3>
+  		<p class="popup">There are no specific instructions for thislevel</p>
+  		<button class="launch_level_popup" data-level-number={{currentLevel}}>Start level</button>
 </script>
 
 

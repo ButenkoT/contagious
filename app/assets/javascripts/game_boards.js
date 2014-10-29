@@ -188,7 +188,7 @@ $(document).ready(function(){
   });
 
 
-
+var levelsDone = [];
 
 
   function levelLaunch() {
