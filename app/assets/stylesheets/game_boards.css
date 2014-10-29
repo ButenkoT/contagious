@@ -62,6 +62,7 @@
 }
 
 [data-type="6"]{
+  content: url(yellow_germ_60x60.svg);
 }
 
 .clicked{
@@ -85,7 +86,7 @@
   left: 1.3em;
   z-index: 100000;
 }
-
+/*
 .about_popup_launch {
   color: white;
-}
+}*/
