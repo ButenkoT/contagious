@@ -17,9 +17,28 @@
 }
 
 .game-buttons {
+   display: inline-block;
+   background: #ff0000;
+   padding: 5px 20px;
+   color: white;
+   font-size: 14px;
+   font-family: helvetica;
+   vertical-align: top;
+}
+
+.game-buttons:hover {
+    box-shadow: 0 1px 0 rgba(0,0,0,1);
+    border-top: 1px solid #636363;
+}
+
+.game-score {
     display: inline-block;
-    color: white;
+    background-color: white;
+    color: red;
+    font-size: 14px;
+    font-family: helvetica;
     vertical-align: top;
+    padding: 7px;
 }
 
 .game-board {
@@ -95,6 +114,7 @@
     left: 1.3em;
     z-index: 100000;
 }
+
 
 /*
 .about_popup_launch {
