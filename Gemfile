@@ -20,6 +20,7 @@ gem 'underscore-rails', '~> 1.7.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'bcrypt'
+gem 'rails_12factor'
 
 # Use magnific pop for lightboxes
 gem 'magnific-popup-rails'
