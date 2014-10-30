@@ -1,6 +1,11 @@
 class PagesController < ApplicationController
   def index
-  	@user = Player.new
+  	@player = Player.new
+
+    # respond_to do |format|
+    #   format.html{}
+    #   format.json {render :json => @player}
+    # end
   end
 
 end
