@@ -7,15 +7,15 @@
 	<div class="window_column_right">
 		<div class="registration_box_grey">
 			<div class="registration_box_white">
-					<h1>Register New Player</h1>
-					<%= form_for @user do |f| %>
-					<p><%= f.text_field :nickname, :placeholder => "Nickname" %></p>
-					<p><%= f.text_field :email, :placeholder => "Email address" %></p>
-					<p><%= f.password_field :password, :placeholder => "Password" %></p>
-					<p><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></p>
-					<%= f.submit :id => "submit_button" %>
-					<% end %>
+				
+				<%= form_tag '#', :id => "email_check" %>
+					<input name="email" placeholder="Enter email address" id="email">
+					<%= submit_tag %>
+
 			</div>
+		</div>
 		</div>
 	</div>
 </div>
+
+

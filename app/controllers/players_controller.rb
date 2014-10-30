@@ -5,13 +5,12 @@ class PlayersController < ApplicationController
 
   def create
     @player = Player.new player_params
-    # if @player.save
-    #   session[:player_id] = @player.id
-    #   redirect_to game_boards_path
-    # else
-    #   render :new
-    # end
-    redirect_to player
+    if @player.save
+      session[:player_id] = @player.id
+      redirect_to game_boards_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -41,6 +40,16 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find params[:id]
+  end
+
+  def check_email
+    @player = Player.find_by :email => params[:email]
+    if @player 
+      render "session/new", :layout => false
+    else
+      @user = Player.new
+      render :new, :layout => false
+    end
   end
 
   # def score ?

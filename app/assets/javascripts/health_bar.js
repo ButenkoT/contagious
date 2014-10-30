@@ -4,6 +4,10 @@ var levelPassed = true;
 $(document).ready(function () {
 	var myCanvas = document.getElementById('my_canvas');
 
+  if (!myCanvas) {
+    return;
+  }
+
   var circle = new ProgressCircle({
       canvas: myCanvas,
   });
