@@ -170,6 +170,18 @@ button.launch_level_popup:hover {
 	background-color: rgba(225,225,225,1);
 }
 
+.virus{
+	border: 5px solid black;
+	border-radius: 100%;
+	padding: 10px;
+	position: absolute;
+	top: -190px;
+	right: 14%;
+	height: 200px;
+	width: 200px;
+	background-color: rgba(225,225,225,1);
+}
+
 .window {
 
 }
@@ -199,23 +211,19 @@ button.launch_level_popup:hover {
 	padding-top: 5px;
 	bottom: 3em;
 	right: 4em;
-	-webkit-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
 }
 
 .profile_box_white {
 	width: 308px;
-	height: 230px;
+	height: 250px;
 	display: inline-block;
 	position: relative;
 	font-family: Helvetica;
-	font-size: 13px;
+	font-size: 17px;
 	text-align: left;
 	margin: 60px;
 	background-color: white;
-	-webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
 	color: black;
 	padding-left: 59px;
@@ -232,7 +240,7 @@ height: 28px;
    background: #ff0000;
    padding: 5px 20px;
    color: white;
-   font-size: 14px;
+   font-size: 16px;
    font-family: helvetica;
 }
 
@@ -245,12 +253,12 @@ height: 28px;
 	 background: #ff0000;
    padding: 5px 20px;
    color: white;
-   font-size: 14px;
+   font-size: 16px;
    font-family: helvetica;
 }
 
 .edit_button:hover {
-	box-shadow: 0 1px 0 rgba(0,0,0,1);
+	box-shadow: 1px 1px 1px rgba(0,0,0,1);
 	border-top: 1px solid #636363;
 }
 
@@ -258,11 +266,11 @@ a {
 	text-decoration: none;
 }
 
-#germ {
+/*#germ {
 	position: absolute;
-	left: 25%;
-	top: -46%;
-}
+	left: 10%;
+	top: -10%;
+}*/
 
 #logo {
 	position: absolute;
