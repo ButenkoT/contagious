@@ -361,3 +361,9 @@ ol li:hover{
 	width: 15%;
 }
 
+footer{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	padding: 10px;
+}

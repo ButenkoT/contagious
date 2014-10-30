@@ -52,9 +52,6 @@ class PlayersController < ApplicationController
     end
   end
 
-  # def score ?
-  # end
-
 
   private
   def player_params

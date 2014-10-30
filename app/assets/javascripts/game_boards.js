@@ -13,8 +13,25 @@ function generate() {
 
 
 function setScore($board, score) {
-  $board.data('score', score);
-  $('.player-score').text('Score: ' + score);
+
+  function callback(savedScore) {
+    $board.data('score', savedScore);
+    $('.player-score').text('Score: ' + savedScore);
+  }
+
+  var boardId = $board.data('id');
+  saveScoreOnServer(boardId, score, callback);
+
+}
+
+
+function saveScoreOnServer(boardId, score, callback) {
+  $.get('/game_boards/save_score', {
+    score: score,
+    board_id: boardId
+  }).done(function (savedScore) {
+    callback(savedScore);
+  });
 }
 
 
@@ -41,7 +58,6 @@ function createBoard($board) {
   fillBoard($board);
   setScore($board, 0);
 }
-
 
 function shuffle($board) {
   fillBoard($board);
@@ -184,6 +200,13 @@ function fillMissing($board) {
 }
 
 
+function createBoardOnServer(callback) {
+  $.get('/game_boards/create_board').done(function (boardId) {
+    callback(boardId);
+  });
+}
+
+
 $(document).ready(function () {
 
 
@@ -266,7 +289,7 @@ $(document).ready(function () {
     .on('click', '.exit-game', function (event) {
       event.preventDefault();
       setScore($('.game-board'), 0);
-      $.magnificPopup.close(); 
+      $.magnificPopup.close();
     })
 
     .on('click', '.about_popup_launch', function (event) {
@@ -281,18 +304,25 @@ $(document).ready(function () {
       });
     })
 
-    .on('click', '.launch_level_popup', function(event){
+    .on('click', '.launch_level_popup', function (event) {
       event.preventDefault();
 
-      $.magnificPopup.open({
-        items: {
-          src: $('#gameTemplate').html(),
-          type: 'inline',
-          midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-        }
+      createBoardOnServer(function (boardId) {
+        $.magnificPopup.open({
+          items: {
+            src: $('#gameTemplate').html(),
+            type: 'inline',
+            midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+          }
+        });
+
+
+        var $board = $('.game-board');
+        $board.data('id', boardId);
+        createBoard($board);
       });
 
-      createBoard($('.game-board'));
+
     })
   ;
 
