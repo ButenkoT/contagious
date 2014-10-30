@@ -197,9 +197,9 @@ $(document).ready(function () {
       $(this).removeClass('clicked');
     })
 
-    .on('click', '.game-board .board-cell.clicked', function () {
-      $(this).removeClass('clicked');
-    })
+    // .on('click', '.game-board .board-cell.clicked', function () {
+    //   $(this).removeClass('clicked');
+    // })
 
     .on('click', '.game-board .board-cell:not(.clicked)', function () {
       var $cell = $(this),

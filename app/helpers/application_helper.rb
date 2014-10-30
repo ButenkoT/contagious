@@ -16,11 +16,12 @@ module ApplicationHelper
       # Leaderboard Button
       nav += "<li><a href='" + players_path + "'><i class='fa fa-trophy fa-3x'></i></a></li> "
 
-    else
-      nav += "<li>#{ link_to('Register', new_player_path) }</li> "
-      nav += "<li>#{ link_to('Sign in', login_path) }</li>"
+    # else
+    #   # nav += "<li><a href='/'><i class='fa fa-home fa-3x'></i></a></li>"
+    #   nav += "<li>#{ link_to('Register', new_player_path) }</li> "
+    #   nav += "<li>#{ link_to('Sign in', login_path) }</li>"
     end
-    nav
+    
   end
 end
 
