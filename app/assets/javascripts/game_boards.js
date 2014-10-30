@@ -13,15 +13,8 @@ function generate() {
 
 
 function setScore($board, score) {
-
-  function callback(savedScore) {
-    $board.data('score', savedScore);
-    $('.player-score').text('Score: ' + savedScore);
-  }
-
-  var boardId = $board.data('id');
-  saveScoreOnServer(boardId, score, callback);
-
+  $board.data('score', score);
+  $('.player-score').text('Score: ' + score);
 }
 
 
@@ -252,9 +245,16 @@ $(document).ready(function () {
         swap($cell, $prev);
       }
 
+      function callback(savedScore) {
+        
+      }
+
+      var boardId = $board.data('id');
+      var score = $board.data('score');
+      saveScoreOnServer(boardId, score, callback);
+
+
       $board.find('.board-cell.clicked').removeClass('clicked');
-
-
     })
 
 

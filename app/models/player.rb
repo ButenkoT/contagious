@@ -2,12 +2,14 @@
 #
 # Table name: players
 #
-#  id         :integer          not null, primary key
-#  nickname   :string(255)
-#  score      :integer
-#  healthbar  :integer
-#  created_at :datetime
-#  updated_at :datetime
+#  id              :integer          not null, primary key
+#  nickname        :string(255)
+#  score           :integer
+#  healthbar       :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  email           :string(255)
+#  password_digest :string(255)
 #
 
 class Player < ActiveRecord::Base
