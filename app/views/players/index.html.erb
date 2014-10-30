@@ -4,7 +4,7 @@
     <%= image_tag('contagious_logo.svg', :id => 'leaderboard_logo') %>
   </div>
 <ol>
-  <% @players.each do |player| %>
+  <% @players.each do | player|%>
     <li><%= player.nickname %> Score: <%= player.score %></li>
   <% end %>
 </ol>

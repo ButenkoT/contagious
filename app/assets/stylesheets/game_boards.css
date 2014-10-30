@@ -24,6 +24,7 @@
    font-size: 14px;
    font-family: helvetica;
    vertical-align: top;
+   min-width:200px; 
 }
 
 .game-buttons:hover {
