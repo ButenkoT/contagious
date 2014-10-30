@@ -6,6 +6,8 @@
 #  title      :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  score      :decimal(, )
+#  player_id  :integer
 #
 
 class Game_board < ActiveRecord::Base
