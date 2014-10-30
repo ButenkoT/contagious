@@ -232,6 +232,10 @@ input:not(.level_link):hover{
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.75);
 }
 
+#email_check .button, #new_player #submit_button {
+	width: auto;
+}
+
 .button {
 	background: #ff0000;
    padding: 5px 20px;
