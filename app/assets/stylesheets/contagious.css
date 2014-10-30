@@ -93,52 +93,52 @@ button.launch_level_popup:hover {
 
 #one.level_link {
 	top: 82%;
-	left: 38%;
+	left: 37%;
 }
 
 #two.level_link {
 	top: 82%;
-	left: 52%;
+	left: 51%;
 }
 
 #three.level_link {
 	top: 62%;
-	left: 45%;
+	left: 44%;
 }
 
 #four.level_link {
-	top: 52%;
-	left: 82%;
+	top: 53%;
+	left: 80%;
 }
 
 #five.level_link {
-	top: 52%;
+	top: 53%;
 	left: 8%;
 }
 
 #six.level_link {
-	top: 35%;
+	top: 39%;
 	left: 62%;
 }
 
 #seven.level_link {
-	top: 35%;
+	top: 39%;
 	left: 27%;
 }
 
 #eight.level_link {
-	top: 27%;
+	top: 32%;
 	left: 39%;
 }
 
 #nine.level_link {
-	top: 27%;
+	top: 32%;
 	left: 49%;
 }
 
 #ten.level_link {
 	top: 10%;
-	left: 45%;
+	left: 44%;
 }
 
 
@@ -228,12 +228,12 @@ padding-left: 10px;
 text-shadow: 1px 1px 1px rgba(20,20,20, 0.6);
 }
 
-input:hover{
+input:not(.level_link):hover{
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.75);
 }
 
 .button {
-	 background: #ff0000;
+	background: #ff0000;
    padding: 5px 20px;
    color: white;
    font-size: 16px;
