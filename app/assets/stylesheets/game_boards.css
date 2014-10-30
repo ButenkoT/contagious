@@ -50,23 +50,23 @@
 }
 
 [data-type="1"] {
-    content: url(pill_60x60.svg);
+    content: url(pill_60x60.png);
 }
 
 [data-type="2"] {
-    content: url(blue_germ_60x60.svg);
+    content: url(blue_germ_60x60.png);
 }
 
 [data-type="3"] {
-    content: url(purple_germ_60x60.svg);
+    content: url(purple_germ_60x60.png);
 }
 
 [data-type="4"] {
-    content: url(pink_germ_60x60.svg);
+    content: url(pink_germ_60x60.png);
 }
 
 [data-type="5"] {
-    content: url(orange_germ_60x60.svg);
+    content: url(orange_germ_60x60.png);
 }
 
 [data-type="6"] {

@@ -3,7 +3,6 @@ module ApplicationHelper
   def intellinav
     nav = ''
     if @current_player.present?
-      nav += "<li>Hello #{ @current_player.nickname }</li> "
 
       # Play Button
       nav += "<li><a href='" + game_boards_path + "'><i class='fa fa-caret-square-o-right fa-3x'></i></a></li> "
