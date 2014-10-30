@@ -20,6 +20,6 @@ rake db:create
 rake db:migrate
 rake db:seed
 
-
+As test user you can login with "anna@anna" as email address and "anna" as password.
 
 

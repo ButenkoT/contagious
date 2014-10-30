@@ -57,6 +57,11 @@ h2.popup {
 
 p.popup {
 	margin-bottom: 2em;
+	
+}
+
+li.popup {
+	list-style: none;
 }
 
 button.launch_level_popup {
