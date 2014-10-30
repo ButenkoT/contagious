@@ -38,7 +38,7 @@ nav li:hover{
 }
 
 .fa{
-	color:purple;
+	color:rgba(211 , 0, 0, 1);
 }
 
 
@@ -162,8 +162,8 @@ button.launch_level_popup:hover {
 	position: absolute;
 	top: 15px;
 	right: 10px;
-	height: 250px;
-	width: 250px;
+	height: 20%;
+	width: 15%;
 	background-color: rgba(225,225,225,1);
 }
 
@@ -222,10 +222,10 @@ button.launch_level_popup:hover {
 
 input {
 width: 502px;
-height: 43px;
-font-size: 20px;
+height: 25px;
+font-size: 14px;
 padding-left: 10px;
-text-shadow: 1px 1px 1px rgba(20,20,20, 0.6);
+margin: 10px;
 }
 
 input:hover{
@@ -266,12 +266,13 @@ a {
 }
 
 .registration_box_grey {
-	width: 97%;
-	height: 54%; 
+	width: 100%;
+	height: auto; 
 	display:inline-block;
 	position:absolute;
 	background-color: #dbdbdb;
 	padding-top: 36px;
+	padding-bottom: 36px;
 	bottom: 3em;
 	right: 4em;
 	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
@@ -343,3 +344,20 @@ ol li:hover{
 	top: 144px;
 	left: 530px;
 }
+
+#health_bar_heading {
+	width: 141%;
+	position: absolute;
+	display: inline-block;
+	top: 78px;
+	left: -1.5em;
+}
+
+#ebola_bubble_message {
+	position: relative;
+	display: inline-block;
+	top: -50em;
+	right: -53em;
+	width: 15%;
+}
+
