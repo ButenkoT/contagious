@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
 
   get '/game_boards' => 'game_boards#index'
+  get '/game_boards/create_board' => 'game_boards#create_board'
+  get '/game_boards/save_score' => 'game_boards#save_score'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
