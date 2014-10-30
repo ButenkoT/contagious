@@ -232,32 +232,26 @@ button.launch_level_popup:hover {
 
 input {
 width: 502px;
-height: 28px;
+height: 43px;
+font-size: 20px;
+padding-left: 10px;
+text-shadow: 1px 1px 1px rgba(20,20,20, 0.6);
 }
 
-#submit_button {
-	 
-   background: #ff0000;
-   padding: 5px 20px;
-   color: white;
-   font-size: 16px;
-   font-family: helvetica;
+input:hover{
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.75);
 }
 
-#submit_button:hover {
-	box-shadow: 0 1px 0 rgba(0,0,0,1);
-	border-top: 1px solid #636363;
-}
-
-.edit_button {
+.button {
 	 background: #ff0000;
    padding: 5px 20px;
    color: white;
    font-size: 16px;
    font-family: helvetica;
+   margin-top: 15px;
 }
 
-.edit_button:hover {
+.button:hover {
 	box-shadow: 1px 1px 1px rgba(0,0,0,1);
 	border-top: 1px solid #636363;
 }
