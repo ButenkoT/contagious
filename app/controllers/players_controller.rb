@@ -32,6 +32,16 @@ class PlayersController < ApplicationController
     @player = Player.find params[:id]
   end
 
+  def check_email
+    @player = Player.find_by :email => params[:email]
+    if @player 
+      render "session/new", :layout => false
+    else
+      @user = Player.new
+      render :new, :layout => false
+    end
+  end
+
 
 
   private
