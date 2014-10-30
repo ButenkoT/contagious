@@ -19,7 +19,7 @@ nav {
 	display:inline-block;
 	position:absolute;
 	font-family: Helvetica;
-	font-size: 13px;
+	font-size: 14px;
 	background-color: #dbdbdb;
  	box-shadow: -10px 0px 10px 1px rgba(0,0,0,0.3);
 	color: rgba(255,255,255,1);
@@ -182,17 +182,10 @@ button.launch_level_popup:hover {
 	background-color: rgba(225,225,225,1);
 }
 
-.window {
-
-}
-
-.window_column_left {
-	width: 49%;
-}
-
 .window_column_left {
 	display: inline-block;
 	position: relative;
+	width: 49%;
 }
 
 .window_column_right {
@@ -260,12 +253,6 @@ a {
 	text-decoration: none;
 }
 
-/*#germ {
-	position: absolute;
-	left: 10%;
-	top: -10%;
-}*/
-
 #logo {
 	position: absolute;
 	left: 2em;
@@ -290,8 +277,6 @@ a {
 	padding-top: 36px;
 	bottom: 3em;
 	right: 4em;
-	-webkit-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
 }
 
@@ -305,8 +290,7 @@ a {
 	text-align: left;
 	margin: 20px;
 	/*background-color: white;*/
-	/*-webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);
+	/*
 	box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.75);*/
 	color: black;
 	padding-left: 25px;
@@ -322,8 +306,6 @@ a {
 	padding-top: 60px;
 	bottom: 3em;
 	right: 3em;
-	-webkit-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.75);
 	padding-left: 4em;
 	font-family: helvetica;
@@ -336,7 +318,6 @@ ol {
 	margin-left: 15%;
 	margin-top: 15%;
 	display:inline-block;
-
 }
 
 ol li {
@@ -347,6 +328,7 @@ ol li {
 	padding-top: 20px;
 	padding-left: 15px;
 	color: white;
+	margin-top: 10px;
 }
 
 .leaderboard_heading {
@@ -358,9 +340,5 @@ ol li {
 	margin-right: 0 auto;
 	position: absolute;
 	top: 144px;
-	left: 486px;
+	left: 530px;
 }
-
-.leaderboard_list {
-}
-
