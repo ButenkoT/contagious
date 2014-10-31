@@ -51,6 +51,15 @@
     display: inline-block;
 }
 
+.start_arrow {
+    position: absolute;
+    right: 56%;
+    top: 66%;
+    z-index: 1000;
+    transform: rotate(-70deg);
+    width: 14%;
+}
+
 .board-cell {
     padding: 2px;
     width: 71px;
